@@ -7,13 +7,13 @@
 	color: white;
 }
 :root {
-	--blood-red: #b50f1d;
+	--red: #b50f1d;
 	--button-blue: #464966;
 	--button-active: #3e6c45;
 }
 
 .border-red {
-	border: var(--blood-red) solid;
+	border: var(--red) solid;
 }
 
 .height40 {
@@ -43,7 +43,7 @@ header a:hover {
 }
 
 header {
-	border-bottom: var(--blood-red) solid;
+	border-bottom: var(--red) solid;
 	overflow: hidden;
 }
 
@@ -52,9 +52,7 @@ header {
 	justify-content: space-between;
 }
 #header-logo {
-	text-wrap-mode: nowrap;
-	font-size: 46px;
-	line-height: 28px;
+	line-height: 0px;
 }
 
 nav {
@@ -170,6 +168,10 @@ section {
 	text-wrap-style:balance;
 }
 
+footer {
+	background-color: darkred;
+}
+
 @media only screen and (max-width:700px) {
 	#main-container,#header-container {
 		flex-direction: column;
@@ -182,10 +184,5 @@ section {
 		}
 	aside {
 		display: none;
-	}
-}
-@media only screen and (max-width:500px) {
-	nav {
-		gap: 8px;
 	}
 }
