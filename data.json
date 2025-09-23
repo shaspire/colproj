@@ -1,0 +1,1017 @@
+[
+  {
+    "Type": "Weapons",
+    "Image": "Mosin_base.png",
+    "Name": "Surplus Rifle",
+    "Description": "A weapon of a bygone era. A huge bolt action rifle with medicore damage and low fire rate. The weapon has a 10 round internal magazine. Its biggest upside is the cost. Fires .30 rifle ammo",
+    "Cost": "1"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "E-dagger_lit_icon.png",
+    "Name": "Energy Dagger",
+    "Description": "A pen, that upon activation, turns into an energy dagger. The energy dagger makes less noise and does less damage than a full energy sword, however, it's easier to conceal and it is much cheaper.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "Viper_base.png",
+    "Name": "Viper",
+    "Description": "A small, easily concealable, automatic pistol chambered in .35 auto. Retrofitted with a fully automatic receiver. Use pistol magazines.",
+    "Cost": "3"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "Cobra_Base.png",
+    "Name": "Cobra",
+    "Description": "A rugged, robust operator handgun with an inbuilt silencer. Chambered in .25 caseless, this weapon leaves no trace. Uses pistol magazines. The impact of the bullets is louder then the gun itself.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "Python.png",
+    "Name": "Python",
+    "Description": "A loud and deadly revolver. Uses .45 Magnum, and comes loaded with AP ammo. Has an internal cylinder magazine, and must be unloaded before reloading. AP bullets ignore all damage resistance of armor. VERY LOUD. The complete opposite of the cobra.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "Syndicateknuckleduster.png",
+    "Name": "Syndicate Knuckle Dusters",
+    "Description": "A pair of plastitanium knuckle dusters that let you punch hard enough to break the captains jaw into pieces.",
+    "Cost": "6"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "Throwing_knife_better.png",
+    "Name": "throwing knives",
+    "Description": "A set of 4 syndicate branded throwing knives, perfect for imbedding into the body of your victims.",
+    "Cost": "6"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "Eshield-on_.png",
+    "Name": "Energy Shield",
+    "Description": "A close cousin to the Energy Sword, the Energy Shield is an ignitable plasma shield that deflects almost all lasers and energy based projectiles. Additionally, like other shields, it also blocks a good portion of other incoming damage.",
+    "Cost": "8"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "NorthStarGloves.png",
+    "Name": "Gloves of the North Star",
+    "Description": "A pair of blue gloves that drastically increases your punching speed. Deals brute damage.",
+    "Cost": "8"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "Homemade_energy_sword.png",
+    "Name": "Energy Sword",
+    "Description": "A concealable and dangerous plasma sword. Can stored and easily concealed when turned off. Has a decent chance to reflect lasers and bullets. Igniting the sword makes a loud, unmistakable sound.",
+    "Cost": "8"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "Ballistic_Turret_toolbox.png",
+    "Name": "Disposable Ballistic Turret",
+    "Description": "A yellow toolbox that, when struck, deploys into a sentry turret that targets anyone that is not apart of the syndicate. The turret fires .35 auto at slow pace with near perfect accuracy.",
+    "Cost": "6"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "Briefcase.png",
+    "Name": "Sniper Bundle",
+    "Description": "A briefcase containing a Hristov, a powerful antimaterial rifle; a box with 10 bullets, a red tie, gloves, and a lawyer suit. The Hristov has an internal magazine of 5 bullets, so you can reload this weapon twice with this bundle. Sadly one of the worst guns you can buy.",
+    "Cost": "12"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "C-20r.png",
+    "Name": "C-20r Bundle",
+    "Description": "A dufflebag containing a loaded C-20r SMG and two spare magazines. The C-20r is a fast firing .35 auto SMG that automatically ejects spent magazines, reducing overall downtime between reloads.",
+    "Cost": "17"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "Estoc.png",
+    "Name": "Estoc DMR",
+    "Description": "A designated marksman rifle, favored for medium-to-long range engagements. Uses .20 rifle ammo. Comes in a Syndicate Duffel Bag with 3 spare magazines.",
+    "Cost": "19"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "Desword.png",
+    "Name": "Double Bladed Energy Sword",
+    "Description": "A much more expensive counter part to the normal energy sword: with a much higher reflection chance, larger attack angle, higher structural damage, and faster swing. Makes a lot of noise when used or turned on.\n\nCURRENTLY DISABLED AND UNOBTAINABLE",
+    "Cost": "20"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "Bulldog.png",
+    "Name": "Bulldog Bundle",
+    "Description": "A dufflebag with a loaded Bulldog shotgun, two .50 pellet drum magazines, and a .50 beanbag magazine. The Bulldog is a powerful, fast firing and fully-automatic magazine fed shotgun. This weapon performs well against most targets and is lethal in close quarters.",
+    "Cost": "20"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "China_Lake.png",
+    "Name": "China-lake Bundle",
+    "Description": "A dufflebag with a China-Lake grenade launcher loaded with 3 frag grenades in the internal magazine. The bag also includes 4 blast grenades and 4 frag grenades. The grenades are exclusively designed to be fired from this weapon, and sport a dangerously large area of effect. Use with caution.",
+    "Cost": "25"
+  },
+  {
+    "Type": "Weapons",
+    "Image": "L6_saw_base.png",
+    "Name": "L6 Saw Bundle",
+    "Description": "A dufflebag with a loaded L6 SAW and a spare boxmag. The L6 is a fully automatic machinegun that excels at throwing rounds down range. This weapon is very inaccurate, so tougher targets may need to be engaged in close quarters. This weapon may be wielded for slightly better accuracy.",
+    "Cost": "30"
+  },
+  {
+    "Type": "Ammo",
+    "Image": "35_loaded_lethals_mag.png",
+    "Name": "Pistol Magazine (.35 auto)",
+    "Description": "A pistol magazine with 10 rounds of .35 auto. Compatible with the Viper and Mk 58.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Ammo",
+    "Image": "25_Caseless_Loaded.png",
+    "Name": "Pistol Magazine (.25 caseless)",
+    "Description": "A pistol magazine with 10 rounds of .25 caseless ammo. Compatible with the Cobra. Leaves no round casings on the floor.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Ammo",
+    "Image": "30_Lethals_box_loaded.png",
+    "Name": "Box of .30 Rifle Bullets",
+    "Description": "A box of 50 rounds for the surplus rifle.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Ammo",
+    "Image": "60_Ammo_can.png",
+    "Name": "Box of .60 Anti-Material Bullets",
+    "Description": "A box with 10 rounds for the Hristov sniper rifle.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Ammo",
+    "Image": "Ammo_drum_(.50_pellet)-East-6329.png",
+    "Name": "Drum magazine (.50 pellet)",
+    "Description": "Shotgun magazine with 8 shells filled with buckshot. Compatible with the Bulldog.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Ammo",
+    "Image": "35_lethals_amg_magazine.png",
+    "Name": "SMG Magazine",
+    "Description": "A SMG Magazine with 30 rounds of .35 Auto. Compatible with the C-20r and Drozd.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Ammo",
+    "Image": "Speedloader45.png",
+    "Name": "Speed Loader (.45 magnum AP)",
+    "Description": "A speedloader for .45 caliber revolvers. Comes with 6 Armor Piercing (AP) rounds. AP ammunition completely ignores the damage resistance of a target's armor, making them potentially easier to kill.",
+    "Cost": "3"
+  },
+  {
+    "Type": "Ammo",
+    "Image": "Ammo_bundle.png",
+    "Name": "Ammo Bundle",
+    "Description": "A dufflebag containing four .35 auto SMG magazines, four .50 pellet drum mags, and two L6 SAW mag boxes. An efficient and must have purchase for sustaining the war against Nanotrasen.",
+    "Cost": "15"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "Flashbang.png",
+    "Name": "Flashbang",
+    "Description": "A flashbang. Temporarily blinds people without proper eye protection and drastically reduces their speed for a moderate duration. Impressive area of effect.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "Smoke_grenade.png",
+    "Name": "Smoke Grenade",
+    "Description": "A grenade that releases a huge cloud of smoke, concealing your identity and allowing you to make a getaway after bombing med bay for the fifth time!",
+    "Cost": "1"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "GrenadeEMP.png",
+    "Name": "EMP Grenade",
+    "Description": "A throwable grenade with a nonlethal effect. The explosion instantly drains all batteries and device charges within the area of effect. People caught within the explosion are not able to use their earpiece for a short duration. Moderate effect range.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "GrenadeSupermatter.png",
+    "Name": "Singularity Grenade",
+    "Description": "Grenade that simulates the power of a singularity, generates powerful gravity well.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "Composition_C4.png",
+    "Name": "C4",
+    "Description": "An explosive device that can be attached to walls, dealing high structural damage without spacing the floor. Good for breaching walls and destroying machines. Can be set to have a variable time trigger (minimum 10 seconds) or linked to a remote detonator. The device is armed when it is planted. Moderate explosive range.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "GrenadeWhiteHole.png",
+    "Name": "Whitehole Grenade",
+    "Description": "A grenade that repels everything not bolted down away from the center of the \"explosion\". The repelling force is moderately strong, and most humanoids can't walk thru singularity of the grenade. However, the grenade does no damage, does not spill any containers, and has a short duration.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "Fire_grenade.png",
+    "Name": "Incendiary Grenade",
+    "Description": "Releases a spray of incendiary fragments, igniting anyone near the detonation area.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "Explosive_pen_B.png",
+    "Name": "Exploding Pen",
+    "Description": "A small, easily concealable pen with an explosive inside it. It has a very small blast radius; however, the explosive is able to critically injure any unarmored target at the center of the blast. Unlike most other grenades, the pen does not emit a beeping noise when armed. Appears in a special, obviously-illegal package when purchased.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "Sharp_grenade.png",
+    "Name": "Shrapnel Grenade",
+    "Description": "Launches a spray of sharp fragments dealing great damaged against unarmored targets.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "Explosive_Grenade.png",
+    "Name": "Explosive Grenade",
+    "Description": "A 3.5 second fuse high explosive grenade. Deals low structural damage, but deals lethal damage against most foes caught within the blast. Moderate blast range.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "Grenade_penguin_icon.png",
+    "Name": "Grenade Penguin",
+    "Description": "A grenade that takes the form of an aggressive penguin that explodes upon death, or when it meets the end of its fuse. The Penguin ignores syndicate agents. The grenade has a small, but lethal blast range.",
+    "Cost": "5"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "Box.png",
+    "Name": "Electrical Disruptor Kit",
+    "Description": "A large cardboard box that contains 3 EMP grenades and an EMP implanter, for an effective total of 6 EMP explosives. Buying this bundle would save you 3 telecrystals when compared to buying the items individually.",
+    "Cost": "6"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "Syndicate_minibomb.png",
+    "Name": "Syndicate Minibomb",
+    "Description": "A powerful explosive with incredible damage, but limited by its small blast radius. A perfect tool designed for destroying a machine, a body, or whatever else needs to go. 5 second fuse time.",
+    "Cost": "6"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "Cluster.png",
+    "Name": "Cluster Grenade",
+    "Description": "Three explosive grenades bundled together, the grenades get launched after the 3.5 second timer runs out.\n\nWatch as all three grenades perfectly bounce back right back at you!",
+    "Cost": "8"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "BombSyndicate.png",
+    "Name": "Syndicate Bomb",
+    "Description": "A large, difficult to defuse bomb that detonates in a huge, structurally devastating explosion if not disarmed in time. A useful and lethal distraction with a 180 second timer. Starts unanchored when purchased, but bolts upon being armed. Makes a dreaded beeping noise as the timer goes down.",
+    "Cost": "11"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "GRENADIERKIT.png",
+    "Name": "Grenadier Chest Rig",
+    "Description": "A tactical chest rig stuffed with explosive devices. This web vest contains\n4 Explosive grenades\n2 Syndicate minibombs\n2 EMP grenades\n\nand saves 20 TC in total cost for the explosives.",
+    "Cost": "12"
+  },
+  {
+    "Type": "Explosives",
+    "Image": "Syndicate_explosive_bag.png",
+    "Name": "Syndicate C-4 Bundle",
+    "Description": "A bundle of 8 C-4 explosives. Comes with a free blood red dufflebag.",
+    "Cost": "12"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Syndie_headset.png",
+    "Name": "Syndicate Over-Ear Headset",
+    "Description": "A not-so-subtle blood red headset. Comes with a syndicate encryption key, and can support 4 other encryption keys being inserted into it.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Syndie_holster.png",
+    "Name": "Shoulder Holster",
+    "Description": "Red shoulder straps that can hold 7 slots of normal sized weapons and ammo.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Grendair_chest_rig.png",
+    "Name": "Chest Rig",
+    "Description": "Explosion-resistant tactical webbing used for holding traitor goods.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Syndi_backpack.png",
+    "Name": "Syndicate backpack",
+    "Description": "Lightweight explosion-proof a backpack for holding various traitor goods.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Nukie_visor.png",
+    "Name": "Syndicate Visor",
+    "Description": "The syndicate's professional heads-up display, designed for better detection of fellow syndicate agents. Proceed to chinalake them anyway!",
+    "Cost": "2"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Syndi_eva.png",
+    "Name": "Syndicate EVA Bundle",
+    "Description": "A dufflebag that contains an EVA suit, helmet, gasmask and double emergency oxygen tank. Offers no protection asides from space.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Insuls.png",
+    "Name": "Conducting Gloves",
+    "Description": "Looks exactly like insulated gloves, but shocks you far worse than if you had nothing at all! Best given as a gift to a passenger you really don't like.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "White_shoes.png",
+    "Name": "No Slip Shoes",
+    "Description": "A pair of chameleon shoes that protects you from slipping. A deceptively powerful item.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Syndie_jetpack.png",
+    "Name": "Black Jetpack",
+    "Description": "A black and red jetpack that allows you to fly in space.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Gas_mask.png",
+    "Name": "Voice Mask",
+    "Description": "A chameleon tech gasmask that can alter the wearer's voice to sound like anyone they want.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Webvest.png",
+    "Name": "Web Vest",
+    "Description": "A armor vest that provides strong ballistic protection, and serviceable protection against slashing and blunt attacks. Webbing provides internal pockets with similar space to a jacket. Does not protect against space.",
+    "Cost": "3"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Carp_suit.png",
+    "Name": "Carp Hardsuit",
+    "Description": "An ordinary carp suit now with space faring capabilities, so that you can fully make your carp dream come true!!!",
+    "Cost": "4"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Duffle.png",
+    "Name": "Chameleon Kit",
+    "Description": "A backpack full of chameleon tech clothing and accessories. Chameleon tech allows the user to change the appearance of the related item, allowing them to disguise as any job on the station, and more. Synergies well with an Agent ID.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Blood_red_mag_boots.png",
+    "Name": "Blood Red Magboots",
+    "Description": "Mag boots that prevent slipping. Has an integrated jetpack with a low amount of fuel. Magboots only slow the user down slightly when active.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Thiefing_gloves.png",
+    "Name": "Thieving Gloves",
+    "Description": "A pair of black gloves that greatly aid in one's thieving skills. Allows the thief to discreetly pick items off a target without alerting the victim. Gloves are not insulated, and do not support chameleon technology.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Webvest.png",
+    "Name": "Elite Web Vest",
+    "Description": "An upgraded version of the standard syndicate webvest, sporting the same ballistic protection the web vest is known for, alongside added thermal weave and armour plating to provide additional protection against radiation, heat, blunt, slash and caustic.",
+    "Cost": "5"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Blood_red.png",
+    "Name": "Syndicate Hardsuit",
+    "Description": "A dufflebag that contains the infamous blood-red hardsuit used by Syndicate operatives. Lightweight with robust armor. Also comes with some gloves, a gasmask and an airtank.",
+    "Cost": "8"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Raid.png",
+    "Name": "Syndicate raid suit",
+    "Description": "A dufflebag that contains the newly devised syndicate raid suit. Capable of sustaining heavy damage with minimal slowdown. Space faring ability not included any and all harm from doing so is liable solely on the user please contact 1900 donk co for any complaints. Also comes with some gloves, a gasmask and a sick helmet.",
+    "Cost": "8"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Jug_suit.png",
+    "Name": "Cybersun Juggernaut Suit",
+    "Description": "A super heavy suit that, by the name implies, will make you a walking juggernaut. The only thing that will be slowing you down is the suit. And tasers. And poison. Space capable, but does not come with an airtank or gasmask.",
+    "Cost": "12"
+  },
+  {
+    "Type": "Wearables",
+    "Image": "Elite_hardsuit.png",
+    "Name": "Syndicate Elite Hardsuit",
+    "Description": "A dufflebag that contains An elite version of the blood-red hardsuit, with improved mobility and fireproofing. Property of the gorlex marauders.. Also comes with some gloves, a gasmask and an airtank.",
+    "Cost": "12"
+  },
+  {
+    "Type": "Chemicals",
+    "Image": "Dart_red.png",
+    "Name": "Hypo Dart",
+    "Description": "markable dart with an enlarged reservoir for chemicals. It can store up to 7u of reagents in itself, and instantly inject when it hits the target. Starts empty.\n\nA syndicates best friend for dealing with deathsquad scum.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Chemicals",
+    "Image": "Closedsyndismokes.png",
+    "Name": "Syndicate Smokes Packet",
+    "Description": "A pack of 10 cigarettes, infused with nicotine and omnizine. Smoking these cigarettes will slowly heal your wounds over time.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Chemicals",
+    "Image": "Vials.png",
+    "Name": "Chemical Synthesis Kit",
+    "Description": "A starter kit for the aspiring chemist. Includes 60 units of vestine, 15 units of hyperzine, a set of chemistry goggles, and a few beakers. Perfect for all your lexorin foam grenade needs!",
+    "Cost": "4"
+  },
+  {
+    "Type": "Chemicals",
+    "Image": "Stimpen.png",
+    "Name": "Hyperzine Injector",
+    "Description": "A stimulant injector, containing 30u of hyperziene enough chems to keep you running fast and resistant to stuns for 30 seconds. Unlike other stimulants, this chemical mix does not poison you and can keep you alive in dire situations.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Chemicals",
+    "Image": "Medipen.png",
+    "Name": "Combat Medipen",
+    "Description": "A combat injector containing 25u of Omninzine and 5u of Tranexamic Acid. This will stop bleeding and heal all types of injuries.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Chemicals",
+    "Image": "Combatkit_vis.png",
+    "Name": "Combat Medical Kit",
+    "Description": "A black medical kit with\n10 Medicated sutures\n10 Regenerative meshes\n1 Epinephrine pen\n1 Bicardine pen\n1 Dermaline pen\n\nMore than enough chems and bandages to keep you in the fight.",
+    "Cost": "5"
+  },
+  {
+    "Type": "Chemicals",
+    "Image": "Nocturne.png",
+    "Name": "Nocturine Bottle",
+    "Description": "A 30u bottle filled with Nocturine, a chemical that forces sleep if over 8 units of the reagent is in the system.",
+    "Cost": "6"
+  },
+  {
+    "Type": "Chemicals",
+    "Image": "Energy_Dagger.png",
+    "Name": "Hypopen",
+    "Description": "A miniature hypospray that's disguised as a pen. Capable of holding 10u of reagent and able to instantly inject 5u at a time. Able to be hidden inside a PDA.",
+    "Cost": "6"
+  },
+  {
+    "Type": "Chemicals",
+    "Image": "Stimpack_kit.png",
+    "Name": "Hyperzine Injector Kit",
+    "Description": "A white medkit containing 6 microinjectors. Each injector contains 15u of hyperzine and has about half the duration of a full injector.",
+    "Cost": "12"
+  },
+  {
+    "Type": "Chemicals",
+    "Image": "Medical_syndie_duffle.png",
+    "Name": "Interdyne Medical Bundle",
+    "Description": "A dufflebag containing four combat medical kits, four tourniquets, four brute injectors, four burn injectors, four pyra injectors, four punct injectors, four airloss injectors, four combat medipens and a special one handed self defence defibrillator.",
+    "Cost": "24"
+  },
+  {
+    "Type": "Chemicals",
+    "Image": "ZombieIcon.png",
+    "Name": "Syndicate Zombie Bundle",
+    "Description": "An all-in-one kit for unleashing the undead upon a station. Comes with one syringe of Romerol, a python loaded with .45 Magnum, a box of .45 Incendiary ammo, One Ambuzol+ Pill, and three Ambuzol regular pills.",
+    "Cost": "40"
+  },
+  {
+    "Type": "Deception",
+    "Image": "Overpriced_pen_(why).png",
+    "Name": "Cybersun Pen",
+    "Description": "A High-tech pen with a diamond edged tip. A serviceable and concealable melee weapon that doubles as a screwdriver and a functional pen. Maybe ineffective against armored opponents.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Deception",
+    "Image": "Robotics_label.png",
+    "Name": "Binary Translator Key",
+    "Description": "Allows you to listen and communicate onto the Silicon's binary channel, a network utilized by AI and cyborgs. Not recommended to communicate on this channel without a voice changer.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Deception",
+    "Image": "ND.png",
+    "Name": "Fake Nuclear Disk",
+    "Description": "A fake nuclear disk that looks like and has the same description as the real nuclear disk. Can only be identified by attempting to insert it into the nuke, scanning it with an appraisal tool, or, more commonly, using the pinpointer.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Deception",
+    "Image": "Lantern-on.png",
+    "Name": "Extra-Bright Lantern",
+    "Description": "An extremely bright lantern that can also be actively used as a flash. Holds 15 charges.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Deception",
+    "Image": "Synd_label.png",
+    "Name": "Syndicate Encryption Keys",
+    "Description": "A box with two encryption keys that grant access to the Syndicate radio frequency. These keys can be inserted into the vast majority of earpieces. Give one to a trusted friend to communicate discreetly!",
+    "Cost": "2"
+  },
+  {
+    "Type": "Deception",
+    "Image": "Id_card.png",
+    "Name": "Agent ID Card",
+    "Description": "A special ID card that can copy the accesses from other ID cards. With this card, you can change your ID name, job title, and job icon at will .",
+    "Cost": "3"
+  },
+  {
+    "Type": "Deception",
+    "Image": "Lobbying_Bundle_visible.png",
+    "Name": "Lobbying Bundle",
+    "Description": "A brown briefcase with\n30,000 Spessos\nA syndicate encryption key\nSyndicate red phone\nJensen coat\nTacticool jumpsuit\nCombat gloves\nA syndicate hand flag\n\nThis bundle is for when you're either really good for words or just need to buy a few guns with benefits.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Deception",
+    "Image": "BombSyndicate.png",
+    "Name": "Decoy Syndicate Bomb",
+    "Description": "A training bomb stolen from sec and repainted to look like the real thing! Has the same amount of wires as the real thing albeit with a tiny explosion.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Deception",
+    "Image": "Cardboard.png",
+    "Name": "Stealth Box",
+    "Description": "A cardboard box outfitted with stealth technology. Has a stealth distortion field that weakens with movement. You can fit 4 people inside of one stealth box.",
+    "Cost": "5"
+  },
+  {
+    "Type": "Deception",
+    "Image": "Decoy_kit.png",
+    "Name": "Decoy Kit",
+    "Description": "State-of-the-art distraction technology straight from RND. Comes with 5 realistic balloons, four decoy grenades and some snap poppers!\n\nNUKIES REAL!!!",
+    "Cost": "6"
+  },
+  {
+    "Type": "Deception",
+    "Image": "Chamelon.png",
+    "Name": "Chameleon Projector",
+    "Description": "Disappear in plain sight by creating a hologram of an item around you. Do not use this to play the game \"Object Search\".",
+    "Cost": "7"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Nukie_soap.png",
+    "Name": "Soap",
+    "Description": "A red soap bar, engraved with syndicate markings. A powerful slipping device, with a higher slipping velocity and stun time than most other soaps due to its suspicious ingredients.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Syndie_toolbox.png",
+    "Name": "Toolbox",
+    "Description": "A suspicious black and red toolbox that contains insulated black gloves, a syndicate gasmask (which functions as a welding mask), and a full set of tools. The toolbox also functions as a powerful blunt weapon.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "JOL.png",
+    "Name": "Jaws of Life",
+    "Description": "A tool that can pry open any door on the station that's not bolted; however, it takes a few moments to work. This tool makes a loud and distinct sound when it forces open a door.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Carpplush.png",
+    "Name": "Dehydrated Space Carp",
+    "Description": "Just add water to have your very own hungry space carp. You must pet the carp prior to re-hydration to be immune to its vengeance.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Nukie_soap.png",
+    "Name": "Slipocalypse Clustersoap",
+    "Description": "Scatters around small pieces of syndicate-brand soap after being thrown, these pieces of soap evaporate after 60 seconds.\n\nkinda looks like pieces of bubble gum.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Radio_jammer.png",
+    "Name": "Radio Jammer",
+    "Description": "A device that will prevent any nearby outgoing radio communications when activated. Has a medium battery with about 100 seconds of use.",
+    "Cost": "3"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Camera_Bug.png",
+    "Name": "Camera Bug",
+    "Description": "A handheld device that allows you to view cameras, thereby allowing you to plan your actions much better or use them for tracking, ambushes, etc.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Syndicateborgbomb.png",
+    "Name": "Martyr Cyborg Module",
+    "Description": "Turn your emagged borg friend into a walking bomb!",
+    "Cost": "4"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Authentication_Disruptor_image.png",
+    "Name": "Authentication Disruptor",
+    "Description": "A good friend of the EMAG, capable of breaking the access of doors, lockers, vendors and machines, allowing them to be used by anyone. Has 3 charges that regenerate over time.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Authentication_Disruptor_image.png",
+    "Name": "Access Breaker",
+    "Description": "Identical to the Authentication Disruptor, but for nuclear operatives.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Emag.png",
+    "Name": "Cryptographic Sequencer (EMAG)",
+    "Description": "An iconic electromagnetic card, capable of jailbreaking machines, allowing them have alternative, highly illegal effects. Works on vendors, machines and even cyborgs, so long as you have access to them! Has three charges that regenerate over time.",
+    "Cost": "5"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Syndicate_borg_module.png",
+    "Name": "Weapon Cyborg Module",
+    "Description": "This module will give a cyborg an reachable viper and energy dagger.",
+    "Cost": "5"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Powersink.png",
+    "Name": "Power Sink",
+    "Description": "A device that drains a lot of power from the station before exploding. Must be anchored onto a wire to drain power.",
+    "Cost": "8"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Singularity_beacon.png",
+    "Name": "Singularity Beacon",
+    "Description": "A device that attracts singularities. Has to be anchored and powered. Causes singularities to grow when consumed. CAUTION may blow up when damaged.\n\nSINGUOLOOOSEE!!!!",
+    "Cost": "12"
+  },
+  {
+    "Type": "Disruption",
+    "Image": "Circuit.png",
+    "Name": "Antimov Law Circuit",
+    "Description": "A very dangerous lawset that allows the A.I. to kill anyone and everyone, with laws that are the opposite of Crewsimov. I'm sorry Dave I'm afraid I can't do that..",
+    "Cost": "14"
+  },
+  {
+    "Type": "Implants",
+    "Image": "Microbomb.png",
+    "Name": "Micro Bomb Implanter",
+    "Description": "Explode on death or manual activation with this implant. Destroys the body along with all equipment worn.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Implants",
+    "Image": "Portal.png",
+    "Name": "EMP Implanter",
+    "Description": "An implanter that, once injected, gives the user the ability to unleash a small EMP burst that disables all nearby electrical devices like an EMP grenade. Has three uses.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Implants",
+    "Image": "Implanter0.png",
+    "Name": "Death Acidifer Implant",
+    "Description": "Completely melts the user including all of their equipment on use or death. Suspiciously only used after most operatives have been stripped.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Implants",
+    "Image": "Box_of_doom.png",
+    "Name": "Box of Deathrattler Implants",
+    "Description": "A cardboard box with 5 death rattler implants and 5 GPS devices. Death rattlers give a notification on the syndicate radio comms when an implanted user goes critical or perishes, and provides GPS coordinates.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Implants",
+    "Image": "Implanter0.png",
+    "Name": "Fake Mindshield Implant",
+    "Description": "An implanter that, when injected, allows the user to toggle a mindshield effect on and off that will have you appear to be mindshielded on a security HUD. Goes well with the agent ID and chameleon clothes.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Implants",
+    "Image": "Implanter0.png",
+    "Name": "DNA Scrambler",
+    "Description": "An implanter that, once injected, allows the user to instantly randomize their phenotype on demand. The user retains their basic race, however, all other attributes will be randomized including name, gender, skin tone, and hair. Your new identity will not be on the manifest.",
+    "Cost": "5"
+  },
+  {
+    "Type": "Implants",
+    "Image": "Freedom.png",
+    "Name": "Freedom Implanter",
+    "Description": "An implanter that, once injected, allows the user to escape cuffs up to three times on demand.",
+    "Cost": "5"
+  },
+  {
+    "Type": "Implants",
+    "Image": "Portal.png",
+    "Name": "Scram Scrambler",
+    "Description": "A 2-use implant which teleports you within a large radius. Attempts to teleport you onto a unobstructed tile. Whether that tile is next to your fellow operatives or inside a minibomb is up to the gods to decide.",
+    "Cost": "6"
+  },
+  {
+    "Type": "Implants",
+    "Image": "Grey_backpack.png",
+    "Name": "Storage Implanter",
+    "Description": "An implanter that, once injected, allows the user to access a subdermal storage bag that can hold up to two L (pistol) grids.",
+    "Cost": "8"
+  },
+  {
+    "Type": "Implants",
+    "Image": "Microbomb.png",
+    "Name": "Macro Bomb Implanter",
+    "Description": "An implanter that, once injected, will cause the user to detonate in a large explosion upon death. Large area of effect and large potential for team fragging. Use with caution. 5 second fuse time after flat lining.",
+    "Cost": "13"
+  },
+  {
+    "Type": "Implants",
+    "Image": "Holoparasite_.png",
+    "Name": "Holoparasite Kit",
+    "Description": "A cardboard box containing a Holoparasite Injector, terms and service, and a troublemaker's softcap. A holoparasite is a sentient guardian, capable of punching at rapid speeds. The parasite can remain inside the host, or can be deployed to a short distance. The parasite shares damage with its host. Unlike most implants, the Holoparasite can NOT be removed with an implant remover. The only way to kill a Holoparasite is to kill the host. The host may be revived after death and will not have the Holoparasite anymore.",
+    "Cost": "14"
+  },
+  {
+    "Type": "Allies",
+    "Image": "Syndicate-icon-pai-off.png",
+    "Name": "Syndicate pAI",
+    "Description": "A blood-red personal AI device. The perfect companion for when you're on the run. Comes equipped with access to the Syndicate communication network. Usefulness not guaranteed.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Allies",
+    "Image": "Old-radio-syndicat.png",
+    "Name": "SyndiCat Teleporter",
+    "Description": "Call in a handy cat equipped with a microbomb implant. Explodes when seriously injured. Can bite painfully.\n\nMrrowow :3",
+    "Cost": "6"
+  },
+  {
+    "Type": "Allies",
+    "Image": "Old-radio-ancestor.png",
+    "Name": "Genetic Ancestor Reinforcement Teleporter",
+    "Description": "Call in a trained monkey or kobold to assist you. Comes with some drip and a cigarette. Monkey and kobold agents are supposed to follow your orders. Results may vary.",
+    "Cost": "6"
+  },
+  {
+    "Type": "Allies",
+    "Image": "Old-radio-urist.png",
+    "Name": "Reinforcement Teleporter",
+    "Description": "A radio that calls in a specialized agent of variable quality. They come in three flavors medic, spy, and thief and are all equipped with a Viper, Combat Knife and carp plush. It is their job to assist you in whatever operation or objectives you are campaigning on.",
+    "Cost": "14"
+  },
+  {
+    "Type": "Allies",
+    "Image": "Old-radio-nukeop.png",
+    "Name": "Nuclear Operative Reinforcement",
+    "Description": "A radio that calls in a Nuclear Operative of variable quality. They come equipped with a Syndicate Hardsuit, Death Acidifier, Pin pointer, Viper, Nukie gas mask, Combat gloves, Chest rig, Combat Knife and carp plush. It is their job to assist you in whatever operation or objectives you are campaigning on.",
+    "Cost": "35"
+  },
+  {
+    "Type": "Allies",
+    "Image": "Old-radio-borg-assault.png",
+    "Name": "Syndicate Assualt Cyborg Teleporter",
+    "Description": "A lean, mean killing machine with access to a Double bladed Energy Sword, L6C (self recharging L6 saw, recharges 1 bullet every 4 seconds), Cryptographic Sequencer, Access Breaker, Crowbar and a Pinpointer.\n\nDont forget welding fuel!!!",
+    "Cost": "65"
+  },
+  {
+    "Type": "Surplus Crates",
+    "Image": "Syndie_crate.png",
+    "Name": "Syndicate Surplus Crate",
+    "Description": "Contains 50 telecrystals worth of completely random Syndicate items. It can be useless junk or really good. Some items are blacklisted from the surplus crates. If you feel always having the same plan is bland, buy this. (And probably regret it.)",
+    "Cost": "20"
+  },
+  {
+    "Type": "Surplus Crates",
+    "Image": "Syndie_crate.png",
+    "Name": "Syndicate Super Surplus Crate",
+    "Description": "Contains 125 telecrystals worth of completely random Syndicate items. Requires the pooling of at least two \"cooperating\" syndicate agents to purchase.",
+    "Cost": "40"
+  },
+  {
+    "Type": "Job Specific",
+    "Image": "Circular_saw.png",
+    "Name": "Advanced Circular Saw",
+    "Description": "An advanced circular saw perfect for all your medical malpractice dreams.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Job Specific",
+    "Image": "Banana_Peel.png",
+    "Name": "Explosive Banana Peel",
+    "Description": "A banana, that once peeled and set, explodes and deals a minor amount of damage.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Job Specific",
+    "Image": "Hot_potato.png",
+    "Name": "Hot Potato",
+    "Description": "A special grenade with a long fuse. This grenade sticks to your hands, and constantly burns you until you hit somebody else with it, passing the curse off to them. The Hot Potato can accumulate a lot of heat damage before detonating. The timer is two minutes long, after which the explosion deals a lot of damage in a small area of effect.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Job Specific",
+    "Image": "Necronomicon.png",
+    "Name": "Necronomicon",
+    "Description": "A book that is capable of summoning a demonic familiar, Cerberus, which is a ghost role. Cerberus is supposed to follow your commands.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Job Specific",
+    "Image": "Chimpbase.png",
+    "Name": "CHIMP Handcannon upgrade chip",
+    "Description": "Once inserted into a CHIMP Handcannon, it allows the device to fire Omega particles. Omega particles can cause anomalies to go super critical, and they deal a moderate amount of burn damage on hit.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Job Specific",
+    "Image": "Wetfloorsign.png",
+    "Name": "Proximity Mine",
+    "Description": "A mine disguised as a wet floor sign. It has a large blast radius and does just enough damage to critically injure somebody not wearing armor.",
+    "Cost": "5"
+  },
+  {
+    "Type": "Job Specific",
+    "Image": "Blue_boxing_gloves.png",
+    "Name": "Rigged boxing gloves",
+    "Description": "Blue boxing gloves that deals high stamina damage and respectable brute damage. You can effectively stun lock a lone target with these gloves.",
+    "Cost": "5"
+  },
+  {
+    "Type": "Job Specific",
+    "Image": "Gatfruit_seed.png",
+    "Name": "Packet of Gatfruit Seeds",
+    "Description": "This packet of seeds slowly grows a tree that produces Gatfruit that, upon consumption, yields a Python with 6 rounds of .45 ammunition.",
+    "Cost": "6"
+  },
+  {
+    "Type": "Job Specific",
+    "Image": "Monkey_cube_box.png",
+    "Name": "Syndicate Sponge Box",
+    "Description": "A box of 6 monkey cubes that, once rehydrated, transforms into a random hostile wildlife creature.",
+    "Cost": "7"
+  },
+  {
+    "Type": "Job Specific",
+    "Image": "Capgun.png",
+    "Name": "Fake Cap Gun",
+    "Description": "A disguised cap gun loaded with .45 Magnum Armor Piercing. Can fire both magnum rounds and cap gun rounds. Despite being a clown exclusive item, clowns cannot use this weapon, since it is a lethal firearm.",
+    "Cost": "9"
+  },
+  {
+    "Type": "Job Specific",
+    "Image": "Holoclown_statue.png",
+    "Name": "Holoclown kit",
+    "Description": "A clown exclusive holo-parasite. Functions similarly to a normal holoparasite, however, it has two pocket slots and a hand slot. Cannot use guns.",
+    "Cost": "12"
+  },
+  {
+    "Type": "Job Specific",
+    "Image": "Holy_hand_grenade.png",
+    "Name": "Holy Hand Grenade",
+    "Description": "'O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy.' Massive area of effect and damage with a short fuse. Spaces rooms and destroys walls. The grenade glows bright white, and it sings when armed. Does not deal enough damage to gib by itself.",
+    "Cost": "20"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "NB.png",
+    "Name": "Syndicate Snack Box",
+    "Description": "A harmless, but nukie themed lunchbox with a random toy and some suspicious drinks and snacks.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Sissorcs.png",
+    "Name": "Barber Scissors",
+    "Description": "MAKE THEM ALL BALD.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Outlaw_glasses.png",
+    "Name": "Outlaw Glasses",
+    "Description": "A silly glasses and mustache combo. An essential pick for any serious undercover operation.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Outlaw_hat.png",
+    "Name": "Outlaw Hat",
+    "Description": "A black brimmed outlaw hat, perfect for challenging any head to a duel right before 12pm.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Syndiesuit.png",
+    "Name": "Operative Jumpsuit / Jumpskirt",
+    "Description": "A cool black and tan jumpsuit used by syndicate operatives. Provides no statistical advantages over a normal jumpsuit. Does not have integrated vitals or coordinate sensors.",
+    "Cost": "1"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Syndie_scarf.png",
+    "Name": "Striped Syndicate Scarfs",
+    "Description": "A valid way of keeping warm",
+    "Cost": "1"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Green_nukie_scarf.png",
+    "Name": "Striped Syndicate Scarfs",
+    "Description": "A valid way of keeping warm",
+    "Cost": "1"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Clown_duffle.png",
+    "Name": "Clown Bundle",
+    "Description": "A clown dufflebag containing a full clown costume, PDA, and service earpiece.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Stamp-syndicate.png",
+    "Name": "Syndicate Rubber Stamp",
+    "Description": "Announce your presence in style by faxing HoP a death threat. A rubber stamp that engraves the \"Syndicate\" on any piece of paper.",
+    "Cost": "2"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Carp_suit.png",
+    "Name": "Carp Suit Dufflebag",
+    "Description": "A dufflebag containing a carp costume and 6 carp plushes. Now you can relive your fantasies of being a space fish while sec uses lethals on you.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Sleepy.png",
+    "Name": "Syndicate PJ Bundle",
+    "Description": "A dufflebag containing 3 pairs of Syndicate PJs, bedsheets and some random plushes.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Capgun.png",
+    "Name": "Cap gun",
+    "Description": "A normal cap gun. Not to be confused with the fake cap gun, which can use lethals.",
+    "Cost": "4"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Syndie_balloon.png",
+    "Name": "Syndie Baloon",
+    "Description": "Watch Sec scream with fear as you approach with this inflatable terror.",
+    "Cost": "20"
+  },
+  {
+    "Type": "Pointless",
+    "Image": "Cat_Ears.png",
+    "Name": "Cat Ears",
+    "Description": "UwU",
+    "Cost": "26"
+  }
+]
