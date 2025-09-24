@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Geo;
+	color: white;
+}
+:root {
+	--red: #b50f1d;
+	--button-blue: #464966;
+	--button-active: #3e6c45;
+}
+
+.border-red {
+	border: var(--red) solid;
+}
+
+.height40 {
+	height: 40px;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+html {
+	background-color: black;
+}
+
+header a {
+	text-decoration: none;
+}
+header a:link {
+	color: white;
+}
+header a:visited {
+	color: white;
+}
+header a:hover {
+	color: #cb0000;
+}
+
+header {
+	border-bottom: var(--red) solid;
+	overflow: hidden;
+}
+
+#header-container {
+	padding: 2px 24px;
+	justify-content: space-between;
+}
+#header-logo {
+	line-height: 0px;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	gap: 30px;
+}
+nav a{
+	font-size: 24px;
+}
+
+#main-container,#header-container {
+	max-width: 1100px;
+	margin: auto;
+}
+
+#main-container {
+	margin-top: 16px;
+	padding: 0 24px;
+	display: flex;
+	gap: 24px;
+}

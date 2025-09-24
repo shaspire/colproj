@@ -59,5 +59,4 @@ const searchResults = document.getElementById("search-results");
 searchResults.style.height = window.innerHeight - searchResults.getBoundingClientRect().top+"px";
 
 searchInput.oninput = function() {updateSearchResults()};
-searchInput.oninput = function() {updateSearchResults()};
 updateSearchResults();
