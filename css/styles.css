@@ -79,7 +79,6 @@ nav a{
 }
 
 /* SHOP */
-
 aside {
 	height: 100%;
 	text-wrap: nowrap;
@@ -173,9 +172,24 @@ footer {
 	background-color: darkred;
 }
 
+/* CART */
+tbody {
+    text-align: center;
+    font-size: 24px;
+	
+}
+th, td {
+  padding: 0 10px;
+}
+
+/* ADAPTIVE */	
+
 @media only screen and (max-width:700px) {
 	#main-container,#header-container {
 		padding: 0 12px;
+	}
+	.filter-option {
+		height: 40px;
 	}
 	#collapse-filters {
 		display: block;
