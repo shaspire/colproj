@@ -105,7 +105,7 @@ document.querySelectorAll(".filter-option").forEach(btn => {
 
 collapseFilters.onclick = function() {
 	if (collapseFilters.classList.contains("active")) {
-		searchFilters.style.display = "none";
+		searchFilters.removeAttribute("style");
 		collapseFilters.classList.remove("active");
 	}
 	else {
