@@ -1,20 +1,67 @@
-function generateCard(type,image,name,description,price) {
+function createCookie(name, value, days) {
+	var expires;
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		expires = "; expires=" + date.toGMTString();
+	}
+	else {
+		expires = "";
+	}
+	document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function getCookie(cname) {
+	let name = cname + "=";
+	let decodedCookie = decodeURIComponent(document.cookie);
+	let ca = decodedCookie.split(';');
+	for(let i = 0; i <ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+function generateCard(ItemID) {
+	let type = Database[ItemID].Type;
+	let img  = "./img/uplink/"+Database[ItemID].Image;
+	let name = Database[ItemID].Name;
+	let desc = Database[ItemID].Description;
+	let cost = Database[ItemID].Cost;
 	return `\
 	<article class="product-item">\n\
 	<div class="image-button-container">\n\
 	<div class="image-container">\n\
-	<img src="${image}" alt="${name}">\n\
+	<img src="${img}" alt="${name}">\n\
 	</div>\n\
-	<button class="product-item__button">${price} TC</button>\n\
+	<button class="product-item__button" data-id="${ItemID}">${cost} TC</button>\n\
 	</div>\n\
 	<div class="name-description-container">\n\
 	<div class="name-type-container">\n\
 	<h2 class="product-item__name">${name}</h2>\n\
 	<p class="product-item__type">${type}</p>\n\
 	</div>\n\
-	<p class="product-item__description">${description}</p>\n\
+	<p class="product-item__description">${desc}</p>\n\
 	</div>\n\
 	</article>`;
+}
+
+function addToCart(ItemID) {
+	if (getCookie("Cart") == "") {
+		var Cart = new Array;
+		Cart.push(ItemID);
+		createCookie("Cart", JSON.stringify(Cart));
+	}
+	else {
+		Cart = JSON.parse(getCookie("Cart"));
+		Cart.push(ItemID);
+		createCookie("Cart", JSON.stringify(Cart));
+	}
 }
 
 function updateSearchResults() {
@@ -22,16 +69,12 @@ function updateSearchResults() {
 	let userInput = searchInput.value.toLowerCase();
 	for (let i in Database) {
 		if ( (userFilters.length == 0 || userFilters.includes(Database[i].Type)) && Database[i].Name.toLowerCase().includes(userInput) ) {
-			let t = Database[i].Type;
-			let x = "./img/uplink/"+Database[i].Image;
-			let y = Database[i].Name;
-			let z = Database[i].Description;
-			let w = Database[i].Cost;
-			searchResults.insertAdjacentHTML("beforeend",generateCard(t,x,y,z,w));
+			searchResults.insertAdjacentHTML("beforeend",generateCard(i));
 		}
 	}
 	searchResults.querySelectorAll(".product-item__button").forEach(btn => {
 		btn.onclick = () => {
+			addToCart(btn.getAttribute("data-id"));
 			audio.fastSeek(0);
 			audio.play();
 		}
@@ -56,7 +99,7 @@ document.querySelectorAll(".filter-option").forEach(btn => {
 document.getElementById("audio").volume = 0.2;
 const searchInput = document.getElementById("search-input");
 const searchResults = document.getElementById("search-results");
-searchResults.style.height = window.innerHeight - searchResults.getBoundingClientRect().top+"px";
 
+searchResults.style.height = window.innerHeight - searchResults.getBoundingClientRect().top+"px";
 searchInput.oninput = function() {updateSearchResults()};
 updateSearchResults();

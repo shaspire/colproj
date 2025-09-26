@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/img/IconSyndicate.png">
+</head>
+<body>
+	<header>
+		<div id="header-container" class="flex">
+			<a id="header-logo" href="/">
+				<img class="height40" src="/img/Syndielogo.png">
+			</a>
+
+			<nav>
+				<a href="../">Return to Syndicate shop</a>
+				<a href="/account/wallet/">Create a Wallet</a>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main-container">
+
+		<div id="empty-cart">
+		<h1>Your cart is empty. You can fill it at our store</h1>
+		</div>
+
+		<div id="filled-cart" style="display: none;">
+			<h1>Your cart</h1>
+			<table>
+				<tbody id="cart-tbody">
+					<tr>
+						<th>Img</th>
+						<th>Name</th>
+						<th>Cost</th>
+						<th>Amount</th>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</main>
+
+	<script type="text/javascript" src="/data.js"></script>
+	<script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
