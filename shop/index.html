@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Syndicate Shop</title>
 	<link rel="stylesheet" href="/css/styles.css">
-	<link rel="stylesheet" href="/css/shop.css">
 	<link rel="icon" type="image/x-icon" href="/img/IconSyndicate.png">
 </head>
 <body>
@@ -16,8 +15,8 @@
 			</a>
 
 			<nav>
-				<a href="/account/wallet/">Create a Wallet</a>
 				<a href="./cart/">Your Cart</a>
+				<a href="/account/wallet/">Create a Wallet</a>
 			</nav>
 		</div>
 	</header>
@@ -27,18 +26,18 @@
 			<aside>
 				<h1>Filters</h1>
 				<form id="search-filters">					
-						<button class="filter-option" type="button" value="Weapon">Weapons</button>
-						<button class="filter-option" type="button" value="Ammo">Ammo</button>
-						<button class="filter-option" type="button" value="Explosive">Explosives</button>
-						<button class="filter-option" type="button" value="Wearable">Wearables</button>
-						<button class="filter-option" type="button" value="Chemical">Chemicals</button>
-						<button class="filter-option" type="button" value="Deception">Deception</button>
-						<button class="filter-option" type="button" value="Disruption">Disruption</button>
-						<button class="filter-option" type="button" value="Implant">Implants</button>
-						<button class="filter-option" type="button" value="Ally">Allies</button>
-						<button class="filter-option" type="button" value="Surplus Crate">Surplus Crates</button>
-						<button class="filter-option" type="button" value="Job Specific">Job Specific</button>
-						<button class="filter-option" type="button" value="Pointless">Pointless</button>
+						<button class="filter-option btn" type="button" value="Weapon">Weapons</button>
+						<button class="filter-option btn" type="button" value="Ammo">Ammo</button>
+						<button class="filter-option btn" type="button" value="Explosive">Explosives</button>
+						<button class="filter-option btn" type="button" value="Wearable">Wearables</button>
+						<button class="filter-option btn" type="button" value="Chemical">Chemicals</button>
+						<button class="filter-option btn" type="button" value="Deception">Deception</button>
+						<button class="filter-option btn" type="button" value="Disruption">Disruption</button>
+						<button class="filter-option btn" type="button" value="Implant">Implants</button>
+						<button class="filter-option btn" type="button" value="Ally">Allies</button>
+						<button class="filter-option btn" type="button" value="Surplus Crate">Surplus Crates</button>
+						<button class="filter-option btn" type="button" value="Job Specific">Job Specific</button>
+						<button class="filter-option btn" type="button" value="Pointless">Pointless</button>
 				</form>
 			</aside>
 			
@@ -46,6 +45,7 @@
 			<div id="search-box" class="flex">
 				<img class="height40" src="./img/IconDetective.png">
 				<input id="search-input" class="border-red" autocomplete="off" spellcheck="false" type="text" placeholder="Search stuff...">
+				<button id="collapse-filters" class="btn">Filters</button>
 			</div>
 			<div id="search-results">
 				<!--  -->

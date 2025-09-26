@@ -1,3 +1,11 @@
+document.getElementById("audio").volume = 0.2;
+var userFilters = new Array;
+const searchFilters = document.getElementById("search-filters");
+const searchInput = document.getElementById("search-input");
+const searchResults = document.getElementById("search-results");
+const collapseFilters = document.getElementById("collapse-filters");
+searchResults.style.height = window.innerHeight - searchResults.getBoundingClientRect().top+"px";
+
 function createCookie(name, value, days) {
 	var expires;
 	if (days) {
@@ -37,7 +45,7 @@ function generateCard(ItemID) {
 	<article class="product-item">\n\
 	<div class="image-button-container">\n\
 	<div class="image-container">\n\
-	<img src="${img}" alt="${name}">\n\
+	<img class="product-item__img" src="${img}" alt="${name}">\n\
 	</div>\n\
 	<button class="product-item__button" data-id="${ItemID}">${cost} TC</button>\n\
 	</div>\n\
@@ -81,7 +89,6 @@ function updateSearchResults() {
 	});
 }
 
-var userFilters = new Array;
 document.querySelectorAll(".filter-option").forEach(btn => {
 	btn.onclick = () => {
 		if (userFilters.includes(btn.value)) {
@@ -96,10 +103,17 @@ document.querySelectorAll(".filter-option").forEach(btn => {
 	}
 });
 
-document.getElementById("audio").volume = 0.2;
-const searchInput = document.getElementById("search-input");
-const searchResults = document.getElementById("search-results");
+collapseFilters.onclick = function() {
+	if (collapseFilters.classList.contains("active")) {
+		searchFilters.style.display = "none";
+		collapseFilters.classList.remove("active");
+	}
+	else {
+		searchFilters.style.display = "flex";
+		searchFilters.parentNode.style.top = collapseFilters.getBoundingClientRect().bottom+"px";
+		collapseFilters.classList.add("active");
+	}
+}
 
-searchResults.style.height = window.innerHeight - searchResults.getBoundingClientRect().top+"px";
 searchInput.oninput = function() {updateSearchResults()};
 updateSearchResults();
