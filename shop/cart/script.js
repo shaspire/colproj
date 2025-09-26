@@ -1,3 +1,10 @@
+const emptyCart = document.getElementById("empty-cart");
+const filledCart = document.getElementById("filled-cart");
+const cartTable = document.getElementById("cart-tbody");
+const Main = document.getElementById("main-container");
+const totalCostHTML = document.getElementById("total-cost");
+const totalItemsHTML = document.getElementById("total-items");
+
 function getCookie(cname) {
 	let name = cname + "=";
 	let decodedCookie = decodeURIComponent(document.cookie);
@@ -40,7 +47,7 @@ function generateRow(ItemID,amount) {
 	<tr>
 	<td>
 	<div class="image-container">
-	<img src="${img}" alt="${name}">
+	<img class="product-item__img" src="${img}" alt="${name}">
 	</div>
 	</td>
 	<td>${name}</td>
@@ -51,23 +58,23 @@ function generateRow(ItemID,amount) {
 
 function updateTable() {
 	var Cart = JSON.parse(getCookie("Cart"));
+	totalItemsHTML.innerHTML += Cart.length;
+	var totalCost = 0;
 	for (let _i in Cart) {
+		let ID = Cart[0];
+		cartTable.insertAdjacentHTML("beforeend",generateRow(ID,Cart.count(ID)));
+		totalCost += Database[ID].Cost * Cart.count(ID);
+		var Cart = Cart.filter(i => i != ID);
 		if (Cart[0] == undefined) {
 			break;
 		}
-		let ID = Cart[0];
-		CartTable.insertAdjacentHTML("beforeend",generateRow(ID,Cart.count(ID)));
-		var Cart = Cart.filter(i => i != ID);
 	}
+	totalCostHTML.innerHTML += totalCost+" TC";
 }
 
-const emptyCart = document.getElementById("empty-cart");
-const filledCart = document.getElementById("filled-cart");
-const CartTable = document.getElementById("cart-tbody");
-const Main = document.getElementById("main-container");
 
-if (getCookie("Cart") !== "") {
+if (getCookie("Cart") != "") {
 	updateTable();
 	emptyCart.style.display = "none";
-	filledCart.style.removeProperty("display");
+	filledCart.removeAttribute("style");
 }
