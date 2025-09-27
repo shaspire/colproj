@@ -14,9 +14,9 @@
 				<img class="height40" src="/img/Syndielogo.png">
 			</a>
 
-			<nav>
+			<nav class="font-24">
 				<a href="../">Return to Syndicate shop</a>
-				<a href="/account/wallet/">Create a Wallet</a>
+				<a id="user-link" href="/account/login/">Create a Wallet</a>
 			</nav>
 		</div>
 	</header>
@@ -27,24 +27,32 @@
 		<h1>Your cart is empty. You can fill it at our store</h1>
 		</div>
 
-		<div id="filled-cart" style="display: none;">
-			<h1>Your cart</h1>
-			<table>
-				<tbody id="cart-tbody">
-					<tr>
-						<th>Img</th>
-						<th>Name</th>
-						<th>Cost</th>
-						<th>Amount</th>
-					</tr>
-				</tbody>
-			</table>
-			<p id="total-items">Amount of Items: </p>
-			<p id="total-cost">Total Cost: </p>
+		<div id="filled-cart" class="two-columns" style="display: none;">
+			<section>
+				<h1>Your cart</h1>
+				<table>
+					<tbody id="cart-tbody" class="font-24">
+						<tr>
+							<th>Img</th>
+							<th>Name</th>
+							<th>Cost</th>
+							<th>Amount</th>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			
+			<aside>
+				<h1>Overview</h1>
+				<p id="total-items">Amount of Items: </p>
+				<p id="total-cost">Total Cost: </p>
+			</aside>
+
 		</div>
 	</main>
 
-	<script type="text/javascript" src="/data.js"></script>
-	<script type="text/javascript" src="./script.js"></script>
+	<script type="text/javascript" src="/js/data.js"></script>
+	<script type="text/javascript" src="/js/shared.js"></script>
+	<script type="text/javascript" src="/js/cart.js"></script>
 </body>
 </html>

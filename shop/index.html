@@ -14,30 +14,30 @@
 				<img class="height40" src="/img/Syndielogo.png">
 			</a>
 
-			<nav>
+			<nav class="font-24">
 				<a href="./cart/">Your Cart</a>
-				<a href="/account/wallet/">Create a Wallet</a>
+				<a id="user-link" href="/account/login/">Create a Wallet</a>
 			</nav>
 		</div>
 	</header>
 	
-	<main id="main-container">
+	<main id="main-container" class="two-columns">
 
-			<aside>
+			<aside id="filters-container">
 				<h1>Filters</h1>
-				<form id="search-filters">					
-						<button class="filter-option btn" type="button" value="Weapon">Weapons</button>
-						<button class="filter-option btn" type="button" value="Ammo">Ammo</button>
-						<button class="filter-option btn" type="button" value="Explosive">Explosives</button>
-						<button class="filter-option btn" type="button" value="Wearable">Wearables</button>
-						<button class="filter-option btn" type="button" value="Chemical">Chemicals</button>
-						<button class="filter-option btn" type="button" value="Deception">Deception</button>
-						<button class="filter-option btn" type="button" value="Disruption">Disruption</button>
-						<button class="filter-option btn" type="button" value="Implant">Implants</button>
-						<button class="filter-option btn" type="button" value="Ally">Allies</button>
-						<button class="filter-option btn" type="button" value="Surplus Crate">Surplus Crates</button>
-						<button class="filter-option btn" type="button" value="Job Specific">Job Specific</button>
-						<button class="filter-option btn" type="button" value="Pointless">Pointless</button>
+				<form id="search-filters" class="column-flex">					
+						<button class="filter-option font-20 btn" type="button" value="Weapon">Weapons</button>
+						<button class="filter-option font-20 btn" type="button" value="Ammo">Ammo</button>
+						<button class="filter-option font-20 btn" type="button" value="Explosive">Explosives</button>
+						<button class="filter-option font-20 btn" type="button" value="Wearable">Wearables</button>
+						<button class="filter-option font-20 btn" type="button" value="Chemical">Chemicals</button>
+						<button class="filter-option font-20 btn" type="button" value="Deception">Deception</button>
+						<button class="filter-option font-20 btn" type="button" value="Disruption">Disruption</button>
+						<button class="filter-option font-20 btn" type="button" value="Implant">Implants</button>
+						<button class="filter-option font-20 btn" type="button" value="Ally">Allies</button>
+						<button class="filter-option font-20 btn" type="button" value="Surplus Crate">Surplus Crates</button>
+						<button class="filter-option font-20 btn" type="button" value="Job Specific">Job Specific</button>
+						<button class="filter-option font-20 btn" type="button" value="Pointless">Pointless</button>
 				</form>
 			</aside>
 			
@@ -59,7 +59,8 @@
 	</footer>
 
 	<audio id="audio" src="./cash-register.mp3"></audio>
-	<script type="text/javascript" src="/data.js"></script>
-	<script type="text/javascript" src="./script.js"></script>
+	<script type="text/javascript" src="/js/data.js"></script>
+	<script type="text/javascript" src="/js/shared.js"></script>
+	<script type="text/javascript" src="/js/shop.js"></script>
 </body>
 </html>

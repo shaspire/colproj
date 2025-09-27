@@ -13,8 +13,46 @@
 	--button-active: #3e6c45;
 }
 
+.font-mono {
+	font-family: monospace;
+	font-size: 18px;
+}
+
+.angle-rect {
+	--angle-rect-clip-size: 16px;
+	clip-path: polygon(0 0,calc(100% - var(--angle-rect-clip-size)) 0,100% var(--angle-rect-clip-size),100% 100%,var(--angle-rect-clip-size) 100%,0 calc(100% - var(--angle-rect-clip-size)));
+}
+
 .height40 {
 	height: 40px;
+}
+
+.column-flex {
+	display: flex;
+	flex-direction: column;
+}
+
+.two-columns {
+	display: flex;
+	gap: 24px;
+}
+
+.btn {
+	background-color: var(--button-blue);
+}
+
+.active {
+	background-color: var(--button-active);
+}
+
+.font-24 {
+	font-size: 24px;
+}
+.font-22 {
+	font-size: 22px;
+}
+.font-20 {
+	font-size: 20px;
 }
 
 html {
@@ -35,6 +73,7 @@ header a:hover {
 }
 
 header {
+	background-color: #000;
 	border-bottom: var(--red) solid;
 	overflow: hidden;
 }
@@ -54,9 +93,6 @@ nav {
 	align-items: center;
 	gap: 30px;
 }
-nav a{
-	font-size: 24px;
-}
 
 #main-container,#header-container {
 	max-width: 1100px;
@@ -66,37 +102,70 @@ nav a{
 #main-container {
 	margin-top: 16px;
 	padding: 0 24px;
-	display: flex;
-	gap: 24px;
 }
 
-/* SHOP */
-aside {
-	height: 100%;
-	text-wrap: nowrap;
-	text-align: center;
+/* ACCOUNT */
+.background {
+	background: url("/img/background/lavaland.jpg") fixed center no-repeat;
+	background-size: cover;
 }
-#search-filters {
+
+#login-container {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	height: 949px;
+}
+
+#login-box {
+	margin-top: 20vh;
+	width: 300px;
+	padding: 25px 12px;
+	background-color: #0f0f0fb3;
+ 	backdrop-filter: blur(8px);
+}
+
+#login-form {
+	gap:3px;
 	display: flex;
 	flex-direction: column;
 }
+
+#uname {
+	color: black;
+}
+
+#submit {
+	padding: 2px 8px;
+	background-color: #000;
+  	color: #5e5e5e;
+	align-self: center;
+}
+
+.red-active {
+	background-color: #d00012 !important;
+	color: #fff !important;
+}
+
+#not-responsible {
+	color: #979797;
+	text-wrap-style: balance;
+}
+
+/* SHOP */
+#filters-container {
+	align-self: start;
+	text-wrap: nowrap;
+	text-align: center;
+}
+
 .filter-option {
 	height: 30px;
-}
-
-.btn {
-	font-size: 20px;
-	background-color: var(--button-blue);
-}
-
-.active {
-	background-color: var(--button-active);
 }
 
 #search-box {
 	height: 40px;
 	display: flex;
-	background-color: transparent;
 	image-rendering: pixelated;
 }
 
@@ -106,7 +175,7 @@ aside {
 	padding: 0 5px;
 	margin-left: 5px;
 	font-size: 28px;
-	background-color: transparent;
+	background-color: black;
 }
 
 #collapse-filters {
@@ -140,7 +209,6 @@ aside {
 }
 .product-item__button {
 	background-color: var(--button-blue);
-	font-size: 24px;
 	height: 32px;
 	border-radius: 10px;
 	margin-top: 4px;
@@ -161,7 +229,6 @@ aside {
 }
 .product-item__description {
 	color: #c8c8c8;
-	font-size: 22px;
 	text-wrap-style:balance;
 }
 
@@ -170,20 +237,19 @@ footer {
 }
 
 /* CART */
-tbody {
-    text-align: center;
-    font-size: 24px;
-	
+#filled-cart {
+	text-align: center;
 }
+
 th, td {
-  padding: 0 10px;
+	padding: 0 10px;
 }
 
 /* ADAPTIVE */	
 
 @media only screen and (max-width:700px) {
 	#main-container,#header-container {
-		padding: 0 12px;
+		padding: 2px 12px;
 	}
 	.filter-option {
 		height: 40px;
@@ -191,11 +257,12 @@ th, td {
 	#collapse-filters {
 		display: block;
 	}
-	aside {
+	#filters-container {
 		position: absolute;
 		right: 12px;
+		z-index: 1;
 	}
-	aside h1, #search-filters {
+	#filters-container h1, #search-filters {
 		display: none;
 	}
 }

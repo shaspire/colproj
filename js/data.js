@@ -44,7 +44,7 @@ const Database = [
 	{
 		"Type": "Weapon",
 		"Image": "Throwing_knife_better.png",
-		"Name": "throwing knives",
+		"Name": "Throwing knives",
 		"Description": "A set of 4 syndicate branded throwing knives, perfect for imbedding into the body of your victims.",
 		"Cost": "6"
 	},

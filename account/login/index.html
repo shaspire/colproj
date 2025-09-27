@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SYNDICATE</title>
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="icon" type="image/x-icon" href="/img/IconSyndicate.png">
+</head>
+<body>
+	<header>
+		<div id="header-container">
+			<a id="header-logo" href="/">
+				<img class="height40" src="/img/Syndielogo.png">
+			</a>
+			
+			<nav class="font-24">
+			</nav>
+		</div>
+	</header>
+	
+	<main id="login-container" class="background">
+		<div id="login-box" class="angle-rect">
+			<h1>Login</h1>
+			<form id="login-form" class="font-24" class="column-flex">
+				<label for="uname">	Username</label>
+				<input type="text" id="uname" class="font-22" placeholder="USERNAME" required>
+				<label for="bcode"> Your BioCode</label>
+				<input type="button" id="bcode" class="font-22 btn" value="SCAN-BIOCODE"><br>
+				<input type="button" id="submit" class="font-24" value="JOIN SYNDICATE!">
+			</form>
+			<br>
+			<p id="not-responsible">Syndicate is not responsible for injury, death, or worse</p>
+		</div>
+	</main>
+	
+	<footer>
+		<h1>SYNDICATE</h1>
+	</footer>
+  
+	<audio id="scan" src="./scanning.ogg"></audio>
+	<audio id="beep" src="./twobeep.ogg"></audio>
+	<audio id="light"src="./light_tube_on.ogg"></audio>
+	<script type="text/javascript" src="/js/shared.js"></script>
+	<script type="text/javascript" src="/js/login.js"></script>
+</body>
+</html>
