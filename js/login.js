@@ -52,9 +52,11 @@ bcode.onclick = function(){
 uname.oninput = function(){checkValidity()}
 
 submit.onclick = function() {
-	let username = uname.value;
-	let biocode = document.getElementById("hash").textContent;
-	var user = {username:username, biocode:biocode};
-	createCookie("user", JSON.stringify(user))
-	window.location.replace("/account/");
+	if (uname.value != "" && document.getElementById("hash") != null) {
+		let username = uname.value;
+		let biocode = document.getElementById("hash").textContent;
+		var user = {username:username, biocode:biocode};
+		createCookie("user", JSON.stringify(user))
+		window.location.replace("/account/");
+	}
 }
