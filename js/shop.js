@@ -1,5 +1,6 @@
 document.getElementById("audio").volume = 0.2;
 var userFilters = new Array;
+const main = document.getElementById("main");
 const searchFilters = document.getElementById("search-filters");
 const searchInput = document.getElementById("search-input");
 const searchResults = document.getElementById("search-results");
@@ -74,7 +75,7 @@ collapseFilters.onclick = function() {
 	}
 	else {
 		searchFilters.style.display = "flex";
-		searchFilters.parentNode.style.top = collapseFilters.getBoundingClientRect().bottom+"px";
+		searchFilters.parentNode.style.top = collapseFilters.getBoundingClientRect().bottom - main.getBoundingClientRect().top +"px";
 		collapseFilters.classList.add("active");
 	}
 }

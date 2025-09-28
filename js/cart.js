@@ -1,7 +1,6 @@
 const emptyCart = document.getElementById("empty-cart");
 const filledCart = document.getElementById("filled-cart");
 const cartTable = document.getElementById("cart-tbody");
-const Main = document.getElementById("main-container");
 const totalCostHTML = document.getElementById("total-cost");
 const totalItemsHTML = document.getElementById("total-items");
 
@@ -31,9 +30,7 @@ function updateTable() {
 		cartTable.insertAdjacentHTML("beforeend",generateRow(ID,Cart.count(ID)));
 		totalCost += Database[ID].Cost * Cart.count(ID);
 		var Cart = Cart.filter(i => i != ID);
-		if (Cart[0] == undefined) {
-			break;
-		}
+		if (Cart[0] == undefined) {break}
 	}
 	totalCostHTML.innerHTML += totalCost+" TC";
 }
