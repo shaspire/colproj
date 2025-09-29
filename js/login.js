@@ -7,13 +7,13 @@ const bcode = document.getElementById("bcode");
 const submit= document.getElementById("submit");
 
 if (getCookie("user") != ""){
-	window.location.replace("/account/");
+	location.replace("/account/");
 }
 
 function fakeHash() {
-	var result = '';
-	var characters = '0123456789ABCDEF';
-	var charactersLength = characters.length;
+	let result = '';
+	let characters = '0123456789ABCDEF';
+	let charactersLength = characters.length;
 	for ( let i = 0; i < 6; i++ ) {
 		for ( let i=0; i < 8; i++) {
 			result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -39,7 +39,7 @@ function checkValidity() {
 bcode.onclick = function(){
 	audScan.play();
 	audScan.onended = function() {
-		var hash = document.createElement("p");
+		let hash = document.createElement("p");
 		hash.textContent = fakeHash();
 		hash.id = "hash"
 		hash.className = "font-mono";
@@ -55,7 +55,7 @@ submit.onclick = function() {
 	if (uname.value != "" && document.getElementById("hash") != null) {
 		let username = uname.value;
 		let biocode = document.getElementById("hash").textContent;
-		var user = {username:username, biocode:biocode};
+		let user = {username:username, biocode:biocode};
 		createCookie("user", JSON.stringify(user))
 		window.location.replace("/account/");
 	}

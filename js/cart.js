@@ -3,6 +3,8 @@ const filledCart = document.getElementById("filled-cart");
 const cartTable = document.getElementById("cart-tbody");
 const totalCostHTML = document.getElementById("total-cost");
 const totalItemsHTML = document.getElementById("total-items");
+const resetBtn = document.getElementById("reset-btn");
+const proceedBtn = document.getElementById("proceed-btn");
 
 function generateRow(ItemID,amount) {
 	let img  = "../img/uplink/"+Database[ItemID].Image;
@@ -23,7 +25,7 @@ function generateRow(ItemID,amount) {
 
 function updateTable() {
 	var Cart = JSON.parse(getCookie("Cart"));
-	totalItemsHTML.innerHTML += Cart.length;
+	totalItemsHTML.innerHTML = "Amount of Items: "+Cart.length;
 	var totalCost = 0;
 	for (let _i in Cart) {
 		let ID = Cart[0];
@@ -32,8 +34,25 @@ function updateTable() {
 		var Cart = Cart.filter(i => i != ID);
 		if (Cart[0] == undefined) {break}
 	}
-	totalCostHTML.innerHTML += totalCost+" TC";
+	totalCostHTML.innerHTML = "Total Cost: "+totalCost+" TC";
 }
+
+[proceedBtn,resetBtn].forEach(btn => {
+	btn.onclick = () => {
+		if (btn.classList.contains("red-active")) {
+			createCookie("Cart", undefined, -1);
+			location.reload();
+		}
+		btn.classList.add("red-active");
+		btn.textContent = "Are you sure?";
+	}
+	
+	let originText = btn.textContent;
+	btn.onblur = () => {
+		btn.classList.remove("red-active");
+		btn.textContent = originText;
+	}
+})
 
 if (getCookie("Cart") != "") {
 	updateTable();

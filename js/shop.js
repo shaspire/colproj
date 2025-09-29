@@ -1,11 +1,9 @@
 document.getElementById("audio").volume = 0.2;
 var userFilters = new Array;
-const main = document.getElementById("main");
 const searchFilters = document.getElementById("search-filters");
 const searchInput = document.getElementById("search-input");
 const searchResults = document.getElementById("search-results");
 const collapseFilters = document.getElementById("collapse-filters");
-searchResults.style.height = window.innerHeight - searchResults.getBoundingClientRect().top+"px";
 
 function generateCard(ItemID) {
 	let type = Database[ItemID].Type;
@@ -68,17 +66,16 @@ document.querySelectorAll(".filter-option").forEach(btn => {
 	}
 });
 
-collapseFilters.onclick = function() {
+collapseFilters.onclick = () => {
 	if (collapseFilters.classList.contains("active")) {
 		searchFilters.removeAttribute("style");
 		collapseFilters.classList.remove("active");
 	}
 	else {
 		searchFilters.style.display = "flex";
-		searchFilters.parentNode.style.top = collapseFilters.getBoundingClientRect().bottom - main.getBoundingClientRect().top +"px";
 		collapseFilters.classList.add("active");
 	}
 }
 
-searchInput.oninput = function() {updateSearchResults()};
+searchInput.oninput = () => {updateSearchResults()};
 updateSearchResults();

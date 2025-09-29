@@ -112,22 +112,15 @@ nav {
 
 #main-container {
 	padding: 16px 24px 0 24px;
+	min-height: 100vh;
 }
 
 /* ACCOUNT */
-#login-container {
-	display: flex;
-	justify-content: center;
-	align-items: start;
-	height: 949px;
-}
-
-
 #login-box {
-	margin-top: 20vh;
-	width: 300px;
+	max-width: 300px;
 	padding: 25px 12px;
-
+	margin: auto;
+	margin-top: 10vh;
 }
 
 #login-form {
@@ -160,6 +153,8 @@ nav {
 /* SHOP */
 #filters-container {
 	align-self: start;
+	position: sticky;
+	top: 0px;
 	text-wrap: nowrap;
 	text-align: center;
 }
@@ -192,6 +187,7 @@ nav {
 #search-results {
 	overflow: scroll;
 	margin-top: 25px;
+	height: 100vh;
 }
 
 .product-item {
@@ -243,6 +239,10 @@ footer {
 
 /* CART */
 #filled-cart {
+	display: flex;
+}
+
+#table {
 	text-align: center;
 }
 
@@ -265,6 +265,7 @@ th, td {
 	}
 	#filters-container {
 		position: absolute;
+		top: 56px;
 		right: 12px;
 		z-index: 1;
 	}
