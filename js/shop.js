@@ -1,9 +1,10 @@
-document.getElementById("audio").volume = 0.2;
 var userFilters = new Array;
 const searchFilters = document.getElementById("search-filters");
 const searchInput = document.getElementById("search-input");
 const searchResults = document.getElementById("search-results");
 const collapseFilters = document.getElementById("collapse-filters");
+const audCash = new Audio("./cash-register.mp3");
+audCash.volume = 0.2;
 
 function generateCard(ItemID) {
 	let type = Database[ItemID].Type;
@@ -32,7 +33,7 @@ function generateCard(ItemID) {
 function addToCart(ItemID) {
 	(getCookie("Cart") == "") ? (Cart = new Array) : (Cart = JSON.parse(getCookie("Cart")));
 	Cart.push(ItemID);
-	createCookie("Cart", JSON.stringify(Cart))
+	createCookie("Cart", JSON.stringify(Cart));
 }
 
 function updateSearchResults() {
@@ -46,8 +47,8 @@ function updateSearchResults() {
 	searchResults.querySelectorAll(".product-item__button").forEach(btn => {
 		btn.onclick = () => {
 			addToCart(btn.getAttribute("data-id"));
-			audio.fastSeek(0);
-			audio.play();
+			audCash.fastSeek(0);
+			audCash.play();
 		}
 	});
 }
