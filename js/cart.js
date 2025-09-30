@@ -24,14 +24,14 @@ function generateRow(ItemID,amount) {
 }
 
 function updateTable() {
-	var Cart = JSON.parse(getCookie("Cart"));
+	let Cart = JSON.parse(getCookie("Cart"));
 	totalItemsHTML.innerHTML = "Amount of Items: "+Cart.length;
-	var totalCost = 0;
+	let totalCost = 0;
 	for (let _i in Cart) {
 		let ID = Cart[0];
 		cartTable.insertAdjacentHTML("beforeend",generateRow(ID,Cart.count(ID)));
 		totalCost += Database[ID].Cost * Cart.count(ID);
-		var Cart = Cart.filter(i => i != ID);
+		Cart = Cart.filter(i => i != ID);
 		if (Cart[0] == undefined) {break}
 	}
 	totalCostHTML.innerHTML = "Total Cost: "+totalCost+" TC";

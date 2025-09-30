@@ -1,7 +1,7 @@
 function createCookie(name, value, days) {
-	var expires;
+	let expires;
 	if (days) {
-		var date = new Date();
+		let date = new Date();
 		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
 		expires = "; expires=" + date.toGMTString();
 	}
@@ -34,7 +34,7 @@ Object.defineProperties(Array.prototype, {
 			Counts number of occurrences of query in array, an integer >= 0 
 			Uses the javascript == notion of equality.
 			*/
-			var count = 0;
+			let count = 0;
 			for(let i=0; i<this.length; i++){
 				if (this[i] == query){
 					count++;
