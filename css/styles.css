@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&family=Jersey+20&family=Jersey+25&display=swap');
 
 /* SHARED */
 * {
 	margin: 0px;
 	padding: 0px;
-	font-family: Geo;
+	font-family: "Jersey 15", sans-serif;
 	color: white;
 }
 :root {
@@ -16,6 +16,15 @@
 .font-mono {
 	font-family: monospace;
 	font-size: 18px;
+}
+.font-20 {
+	font-size: 20px;
+}
+.font-22 {
+	font-size: 22px;
+}
+.font-24 {
+	font-size: 24px;
 }
 
 .angle-rect {
@@ -45,16 +54,6 @@
 	background-color: var(--button-active);
 }
 
-.font-24 {
-	font-size: 24px;
-}
-.font-22 {
-	font-size: 22px;
-}
-.font-20 {
-	font-size: 20px;
-}
-
 .background {
 	background: url("/img/background/lavaland.jpg") fixed center no-repeat;
 	background-size: cover;
@@ -64,7 +63,6 @@
 	background-color: #0f0f0fb3;
 	backdrop-filter: blur(8px);	
 }
-
 
 html {
 	background-color: black;
@@ -161,6 +159,10 @@ nav {
 
 .filter-option {
 	height: 30px;
+}
+
+#search-container {
+	width:100%;
 }
 
 #search-box {

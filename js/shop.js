@@ -38,18 +38,25 @@ function addToCart(ItemID) {
 
 function updateSearchResults() {
 	searchResults.replaceChildren();
-	let userInput = searchInput.value.toLowerCase();
-	for (let i in Database) {
-		if ( (userFilters.length == 0 || userFilters.includes(Database[i].Type)) && Database[i].Name.toLowerCase().includes(userInput) ) {
-			searchResults.insertAdjacentHTML("beforeend",generateCard(i));
-		}
-	}
+	for (let i in Database) { searchResults.insertAdjacentHTML("beforeend",generateCard(i)); }
 	searchResults.querySelectorAll(".product-item__button").forEach(btn => {
 		btn.onclick = () => {
 			addToCart(btn.getAttribute("data-id"));
 			audCash.fastSeek(0);
 			audCash.play();
 		}
+	});
+}
+
+function filterCurrentResults() {
+	let userInput = searchInput.value.toLowerCase();
+	searchResults.querySelectorAll(".product-item").forEach(element => {
+		let itemType = element.querySelector(".product-item__type").textContent;
+		let itemName = element.querySelector(".product-item__name").textContent;
+		if ( (userFilters.length == 0 || userFilters.includes(itemType)) && itemName.toLowerCase().includes(userInput) ) {
+			element.removeAttribute("style");
+		}
+		else { element.style.display = "none"; }
 	});
 }
 
@@ -63,7 +70,7 @@ document.querySelectorAll(".filter-option").forEach(btn => {
 			userFilters.push(btn.value);
 			btn.classList.add("active");
 		}
-		updateSearchResults();
+		filterCurrentResults();
 	}
 });
 
@@ -78,5 +85,5 @@ collapseFilters.onclick = () => {
 	}
 }
 
-searchInput.oninput = () => {updateSearchResults()};
+searchInput.oninput = () => {filterCurrentResults()};
 updateSearchResults();
