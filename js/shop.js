@@ -13,27 +13,21 @@ function generateCard(ItemID) {
 	let desc = Database[ItemID].Description;
 	let cost = Database[ItemID].Cost;
 	return `\
-	<article class="product-item">\n\
-	<div class="image-button-container">\n\
-	<div class="image-container">\n\
-	<img class="product-item__img" src="${img}" alt="${name}">\n\
-	</div>\n\
-	<button class="product-item__button font-24" data-id="${ItemID}">${cost} TC</button>\n\
-	</div>\n\
-	<div class="name-description-container">\n\
-	<div class="name-type-container">\n\
-	<h2 class="product-item__name">${name}</h2>\n\
-	<p class="product-item__type">${type}</p>\n\
-	</div>\n\
-	<p class="product-item__description font-22">${desc}</p>\n\
-	</div>\n\
+	<article class="product-item">
+	<div class="image-button-container">
+	<div class="image-container">
+	<img class="product-item__img" src="${img}" alt="${name}">
+	</div>
+	<button class="product-item__button font-24" data-id="${ItemID}">${cost} TC</button>
+	</div>
+	<div class="name-description-container">
+	<div class="name-type-container">
+	<h2 class="product-item__name">${name}</h2>
+	<p class="product-item__type">${type}</p>
+	</div>
+	<p class="product-item__description font-22">${desc}</p>
+	</div>
 	</article>`;
-}
-
-function addToCart(ItemID) {
-	(getCookie("Cart") == "") ? (Cart = new Array) : (Cart = JSON.parse(getCookie("Cart")));
-	Cart.push(ItemID);
-	createCookie("Cart", JSON.stringify(Cart));
 }
 
 function updateSearchResults() {

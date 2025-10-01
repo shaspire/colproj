@@ -45,6 +45,18 @@ Object.defineProperties(Array.prototype, {
 	}
 });
 
+function addToCart(ItemID) {
+	(getCookie("Cart") == "") ? (Cart = new Array) : (Cart = JSON.parse(getCookie("Cart")));
+	Cart.push(ItemID);
+	createCookie("Cart", JSON.stringify(Cart));
+}
+
+function decFromCart(ItemID) {
+	(getCookie("Cart") == "") ? true : (Cart = JSON.parse(getCookie("Cart")));
+	Cart.indexOf(ItemID) == -1 ? true : Cart.splice(Cart.indexOf(ItemID),1);
+	createCookie("Cart", JSON.stringify(Cart));
+}
+
 if (getCookie("user") != "" && document.getElementById("user-link") != null) {
 	let user = JSON.parse(getCookie("user"));
 	let userlink = document.getElementById("user-link");

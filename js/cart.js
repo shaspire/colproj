@@ -1,8 +1,10 @@
+const audLaunch = new Audio("./hyperspace_begin.ogg")
 const emptyCart = document.getElementById("empty-cart");
 const filledCart = document.getElementById("filled-cart");
 const cartTable = document.getElementById("cart-tbody");
-const totalCostHTML = document.getElementById("total-cost");
-const totalItemsHTML = document.getElementById("total-items");
+const totalCost = document.getElementById("total-cost");
+const totalItems = document.getElementById("total-items");
+const sideButtons = document.getElementById("buttons");
 const resetBtn = document.getElementById("reset-btn");
 const proceedBtn = document.getElementById("proceed-btn");
 
@@ -19,43 +21,85 @@ function generateRow(ItemID,amount) {
 	</td>
 	<td>${name}</td>
 	<td>${cost} TC</td>
-	<td>${amount}x</td>
-	`;
+	<td>
+	<div class="amount-container">
+	<button class="btn dec" data-id="${ItemID}">-</button>
+	<p>${amount}x</p>
+	<button class="btn inc" data-id="${ItemID}"="btn inc">+</button>
+	</td>
+	</tr>`;
 }
 
 function updateTable() {
 	let Cart = JSON.parse(getCookie("Cart"));
-	totalItemsHTML.innerHTML = "Amount of Items: "+Cart.length;
-	let totalCost = 0;
-	for (let _i in Cart) {
+	let Cost = 0;
+	totalItems.innerHTML = "Amount of Items: "+Cart.length;
+	cartTable.replaceChildren(cartTable.children[0]);
+	while (Cart[0] != undefined) {
 		let ID = Cart[0];
 		cartTable.insertAdjacentHTML("beforeend",generateRow(ID,Cart.count(ID)));
-		totalCost += Database[ID].Cost * Cart.count(ID);
+		Cost += Database[ID].Cost * Cart.count(ID);
 		Cart = Cart.filter(i => i != ID);
-		if (Cart[0] == undefined) {break}
 	}
-	totalCostHTML.innerHTML = "Total Cost: "+totalCost+" TC";
-}
+	totalCost.innerHTML = "Total Cost: "+Cost+" TC";
 
-[proceedBtn,resetBtn].forEach(btn => {
-	btn.onclick = () => {
-		if (btn.classList.contains("red-active")) {
-			createCookie("Cart", undefined, -1);
-			location.reload();
+	cartTable.querySelectorAll(".inc").forEach(btn => {
+		btn.onclick = () => {
+			addToCart(btn.getAttribute("data-id"));
+			updateTable();
 		}
-		btn.classList.add("red-active");
-		btn.textContent = "Are you sure?";
-	}
-	
-	let originText = btn.textContent;
-	btn.onblur = () => {
-		btn.classList.remove("red-active");
-		btn.textContent = originText;
-	}
-})
+	});
+	cartTable.querySelectorAll(".dec").forEach(btn => {
+		btn.onclick = () => {
+			decFromCart(btn.getAttribute("data-id"));
+			updateTable();
+		}
+	});
+}
 
 if (getCookie("Cart") != "") {
 	updateTable();
 	emptyCart.style.display = "none";
 	filledCart.removeAttribute("style");
 }
+
+audLaunch.onended = () => {
+	location.reload();
+}
+
+proceedBtn.onclick = () => {
+	if (proceedBtn.classList.contains("red-active")) {
+		audLaunch.play();
+		let countDown = document.createElement("p");
+		countDown.textContent = "Teleporting everything to your position in 5";
+		sideButtons.replaceChildren(countDown);
+		let i = 4;
+		timer = setInterval(() => {
+			countDown.textContent = "Teleporting everything to your position in "+i;
+			i--
+			if (i < 0){
+				createCookie("Cart", undefined, -1);
+				countDown.textContent = "Give 'em hell!";
+			}
+		}, 1000);
+	}
+	proceedBtn.classList.add("red-active");
+	proceedBtn.textContent = "Are you sure?";
+}
+
+resetBtn.onclick = () => {
+	if (resetBtn.classList.contains("red-active")) {
+		createCookie("Cart", undefined, -1);
+		location.reload();
+	}
+	resetBtn.classList.add("red-active");
+	resetBtn.textContent = "Are you sure?";
+}
+
+[proceedBtn,resetBtn].forEach(btn => {	
+	let originText = btn.textContent;
+	btn.onblur = () => {
+		btn.classList.remove("red-active");
+		btn.textContent = originText;
+	}
+})
