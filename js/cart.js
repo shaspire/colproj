@@ -14,14 +14,14 @@ function generateRow(ItemID,amount) {
 	let cost = Database[ItemID].Cost;
 	return `\
 	<tr>
-	<td>
+	<td class="img-column">
 	<div class="image-container">
 	<img class="product-item__img" src="${img}" alt="${name}">
 	</div>
 	</td>
-	<td>${name}</td>
-	<td>${cost} TC</td>
-	<td>
+	<td class="name-column">${name}</td>
+	<td class="cost-column">${cost} TC</td>
+	<td class="amount-column">
 	<div class="amount-container">
 	<button class="btn dec" data-id="${ItemID}">-</button>
 	<p>${amount}x</p>
@@ -30,41 +30,40 @@ function generateRow(ItemID,amount) {
 	</tr>`;
 }
 
+function updateOverview() {
+	let Cost = 0;
+	let Cart = JSON.parse(getCookie("Cart"));
+	totalItems.textContent = "Amount of Items: "+Cart.length;
+	while (Cart[0] != undefined) {
+		let ID = Cart[0];
+		Cost += Database[ID].Cost * Cart.count(ID);
+		Cart = Cart.filter(i => i != ID);
+	}
+	totalCost.textContent = "Total Cost: "+Cost+" TC";
+}
+
 function updateTable() {
 	let Cart = JSON.parse(getCookie("Cart"));
-	let Cost = 0;
-	totalItems.innerHTML = "Amount of Items: "+Cart.length;
+	Cart.sort((a,b) => a - b);
 	cartTable.replaceChildren(cartTable.children[0]);
 	while (Cart[0] != undefined) {
 		let ID = Cart[0];
 		cartTable.insertAdjacentHTML("beforeend",generateRow(ID,Cart.count(ID)));
-		Cost += Database[ID].Cost * Cart.count(ID);
 		Cart = Cart.filter(i => i != ID);
 	}
-	totalCost.innerHTML = "Total Cost: "+Cost+" TC";
-
+	updateOverview();
 	cartTable.querySelectorAll(".inc").forEach(btn => {
 		btn.onclick = () => {
 			addToCart(btn.getAttribute("data-id"));
-			updateTable();
+			checkCart();;
 		}
 	});
 	cartTable.querySelectorAll(".dec").forEach(btn => {
 		btn.onclick = () => {
 			decFromCart(btn.getAttribute("data-id"));
-			updateTable();
+			checkCart();;
 		}
 	});
-}
-
-if (getCookie("Cart") != "") {
-	updateTable();
-	emptyCart.style.display = "none";
-	filledCart.removeAttribute("style");
-}
-
-audLaunch.onended = () => {
-	location.reload();
 }
 
 proceedBtn.onclick = () => {
@@ -87,6 +86,10 @@ proceedBtn.onclick = () => {
 	proceedBtn.textContent = "Are you sure?";
 }
 
+audLaunch.onended = () => {
+	location.reload();
+}
+
 resetBtn.onclick = () => {
 	if (resetBtn.classList.contains("red-active")) {
 		createCookie("Cart", undefined, -1);
@@ -103,3 +106,17 @@ resetBtn.onclick = () => {
 		btn.textContent = originText;
 	}
 })
+
+function checkCart() {
+	if (getCookie("Cart") !== "") {
+		updateTable();
+		emptyCart.style.display = "none";
+		filledCart.removeAttribute("style");
+	}
+	else {
+		filledCart.style.display = "none";
+		emptyCart.removeAttribute("style");
+	}
+}
+
+checkCart();
