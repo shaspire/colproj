@@ -270,22 +270,23 @@ th, td {
 }
 
 .amount-column {
-	width: 120px;
+	width: 100px;
 }
 
 .inc, .dec {
-	width: 30px;
-	height: 30px;
-	font-size: 46px;
+	width: 25px;
+	height: 25px;
+	font-size: 2em;
 	line-height: 0;
 	letter-spacing: -3px;
 }
 
 .amount-container {
 	display: flex;
-	justify-content: space-evenly;
+	width: inherit;
+	justify-content: space-between;
 	align-items: center;
-	gap:10px;
+	gap:10px
 }
 
 /* ADAPTIVE */	

@@ -1,1 +1,1 @@
-A project for a college assigment.
+A repo for college assigments.
