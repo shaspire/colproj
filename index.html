@@ -3,34 +3,42 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/styles.css">
 	<title>Quiz</title>
 </head>
 <body>
 
+	<div id="menu">
+		<button id="start-btn" class="btn">Start Game</button>
+	</div>
 
-	<h1 id="Question"></h1>
-	<h2 id="Timer"></h2>
-	<h2 id="Selection">Selected answer:</h2>
-
-	<div id="Answers">
-		<div id="0-0">
-			<div>A</div>
-			<p id="Answer_A"></p>
-		</div>
-
-		<div id="0-1">
-			<div>B</div>
-			<p id="Answer_B"></p>
-		</div>
-
-		<div id="1-0">
-			<div>C</div>
-			<p id="Answer_C"></p>
+	<div id="game" hidden>
+		<div id="scene">
+			<h2 id="question"></h2>
 		</div>
 		
-		<div id="1-1">
-			<div>D</div>
-			<p id="Answer_D"></p>
+		<div id="answers">
+			<!-- 0-0 -->
+			<div class="answer-option">
+				<button id="0-0_btn" class="answer-btn btn">A</button>
+				<p id="0-0_text" class="answer-text"></p>
+			</div>
+			<!-- 0-1 -->
+			<div class="answer-option">
+				<button id="0-1_btn" class="answer-btn btn">B</button>
+				<p id="0-1_text" class="answer-text"></p>
+			</div>
+			<!-- 1-0 -->
+			<div class="answer-option">
+				<button id="1-0_btn" class="answer-btn btn">C</button>
+				<p id="1-0_text" class="answer-text"></p>
+			</div>
+			<!-- 1-1 -->
+			<div class="answer-option">
+				<button id="1-1_btn" class="answer-btn btn">D</button>
+				<p id="1-1_text" class="answer-text"></p>
+			</div>
+			<h2 id="timer">Timer</h2>
 		</div>
 	</div>
 

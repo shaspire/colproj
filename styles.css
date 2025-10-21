@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "DotGothic16", sans-serif;
+	color: #fff;
+}
+
+:root {
+	
+}
+
+html {
+	background-color: #000;
+}
+
+#scene {
+	height: 60vh;
+}
+
+#answers {
+	border: white solid;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 40% 40%;
+	gap: 50px 15%;
+	padding: 15px 0;
+	margin: 0 50px;
+}
+
+.answer-option {
+	display: flex;
+	flex-direction: row;
+	gap:15px;
+}
+
+.answer-option:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+
+.answer-text {
+	align-self: center;
+	font-size: 1.7em;
+}
+
+#menu {
+	display:flex;
+	justify-content: center;
+}
+
+#start-btn {
+	font-size: 2em;
+	position: absolute;
+	top:50%;
+}
+
+.btn {
+	border-color: gold;
+	color: gold;
+	background: transparent;
+	padding: 5px;
+}
+
+.answer-btn {
+	border:#42fb4b solid;
+	color: #42fb4b;
+	width: 50px;
+	height: 50px;
+	font-weight: 600;
+	font-size: 3em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.answer-selected {
+	border-color: gold;
+	color: gold;
+}
+
+#timer {
+	position: absolute;
+	align-self: center;
+	justify-self: center;
+}
