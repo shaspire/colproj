@@ -1,4 +1,3 @@
-const start_btn = document.getElementById("start-btn");
 const questionText = document.getElementById("question");
 const timerText = document.getElementById("timer");
 const ans_A_btn = document.getElementById("0-0_btn");
@@ -31,13 +30,13 @@ function shuffleA(a) {
 }
 
 let remainingQ = ruQ.slice();
-let correct = Number;
+let correct = 0;
 
 function nextQuestion() {
 	const btns = [ans_A_text,ans_B_text,ans_C_text,ans_D_text];
 	let question = remainingQ[RandomInt(0,remainingQ.length-1)];
 	remainingQ.splice(remainingQ.indexOf(question),1);
-	let rndFalse = shuffleA(question.False);
+	let rndWrong = shuffleA(question.Wrong);
 	let j = 0;
 	correct = RandomInt(0,3);
 	questionText.textContent = question.Question;
@@ -46,32 +45,59 @@ function nextQuestion() {
 			btns[i].textContent = question.Answer;
 		}
 		else {
-			btns[i].textContent = rndFalse[j];
+			btns[i].textContent = rndWrong[j];
 			j++
 		}
 	}
 }
-{
+
+function questionTimer(seconds) {
+	clearInterval(timer);
+	let i = 0;
+	timerText.textContent = seconds;
+	timer = setInterval(() => {
+		i++;
+		if (i>=seconds) {
+			clearInterval(timer);
+		}
+		timerText.textContent = seconds - i;
+	}, 1000);
+}
+
+const Music = new Audio("/sfx/MetalCrusher.mp3");
+
+function startGame() {
+	//Preparations
 	let C = 0;
 	let R = 0;
-	const MenuCursor = new Audio("/sfx/MenuCursor.ogg");
-	const MenuSelect = new Audio("/sfx/MenuSelect.ogg")
-	const btns = [[ans_A_btn,ans_B_btn],[ans_C_btn,ans_D_btn]];
 	window.onkeydown = (event) => {
-		if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(event.key)){
-			//TODO: Implement UI via OOP
-			MenuCursor.play();
+		if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(event.code) && event.repeat == false){
+			const btns = [[ans_A_btn,ans_B_btn],[ans_C_btn,ans_D_btn]];
 			btns[R][C].classList.remove("answer-selected");
-			event.key === "ArrowUp" ? R = Math.abs(R-1) % 2 : false;
-			event.key === "ArrowDown" ? R = Math.abs(R+1) % 2 : false;
-			event.key === "ArrowLeft" ? C = Math.abs(C-1) % 2 : false;
-			event.key === "ArrowRight" ? C = Math.abs(C+1) % 2 : false;
+			event.code === "ArrowUp" ? R = Math.abs(R-1) % 2 : false;
+			event.code === "ArrowDown" ? R = Math.abs(R+1) % 2 : false;
+			event.code === "ArrowLeft" ? C = Math.abs(C-1) % 2 : false;
+			event.code === "ArrowRight" ? C = Math.abs(C+1) % 2 : false;
 			btns[R][C].classList.add("answer-selected");
 			Selected = parseInt(R+""+C+"",2);
+			new Audio("/sfx/MenuCursor.ogg").play();
 		}
+		
+		if (["KeyZ","Enter"].includes(event.code) && event.repeat == false){
+			new Audio("/sfx/MenuSelect.ogg").play();
+		}
+	}
+	document.getElementById("game").removeAttribute("style");
+	document.getElementById("menu").style.display = "none";
+	Music.loop = true;
+	Music.play();
+	//Game loop
 
-		if (["Z","z","Enter"].includes(event.key)){
-			MenuSelect.play();
-		}
+}
+
+window.onkeydown = (event) => {
+	if (["KeyZ","Enter"].includes(event.code)){
+		new Audio("/sfx/MenuSelect.ogg").play();
+		startGame();
 	}
 }
