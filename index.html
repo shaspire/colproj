@@ -17,30 +17,32 @@
 			<!-- <div id="mettaton">
 				<img src="/gfx/Mettaton_battle_box.gif">
 			</div> -->
-			<h2 id="question" class="text-shake"></h2>
+			<div id="question-container">
+				<h2 id="question" class="text-shake"></h2>
+			</div>
 		</div>
 		
 		<div id="box">
 			<h2 id="timer">Timer</h2>
-			<div id="answer-grid">
+			<div id="answer-grid" style="display: none;">
 				<!-- 0-0 -->
 				<div class="answer-option">
-					<button id="0-0_btn" class="answer-btn btn">A</button>
+					<button id="0-0_btn" class="answer-btn btn" tabindex="-1">A</button>
 					<p id="0-0_text" class="answer-text text-shake"></p>
 				</div>
 				<!-- 0-1 -->
 				<div class="answer-option">
-					<button id="0-1_btn" class="answer-btn btn">B</button>
+					<button id="0-1_btn" class="answer-btn btn" tabindex="-1">B</button>
 					<p id="0-1_text" class="answer-text text-shake"></p>
 				</div>
 				<!-- 1-0 -->
 				<div class="answer-option">
-					<button id="1-0_btn" class="answer-btn btn">C</button>
+					<button id="1-0_btn" class="answer-btn btn" tabindex="-1">C</button>
 					<p id="1-0_text" class="answer-text text-shake"></p>
 				</div>
 				<!-- 1-1 -->
 				<div class="answer-option">
-					<button id="1-1_btn" class="answer-btn btn">D</button>
+					<button id="1-1_btn" class="answer-btn btn" tabindex="-1">D</button>
 					<p id="1-1_text" class="answer-text text-shake"></p>
 				</div>
 			</div>

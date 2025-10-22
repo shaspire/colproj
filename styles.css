@@ -3,13 +3,6 @@
 	src:url("/undertale-font-rus-eng.otf.woff2");
 }
 
-* {
-	margin: 0px;
-	padding: 0px;
-	font-family: "Determination", sans-serif;
-	color: #fff;
-}
-
 @keyframes textShake {
 	0% { transform: translate(0px,0px) }
 	25% { transform: translate(1px,0px) }
@@ -18,16 +11,50 @@
 	100% { transform: translate(0px,0px ) }
 }
 
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Determination", sans-serif;
+	color: #fff;
+}
+
 html {
 	background-color: #000;
+}
+
+.text-shake {
+	animation: textShake 0.1s infinite;
+}
+
+
+#menu {
+	display:flex;
+	justify-content: center;
+}
+
+#start-btn {
+	font-size: 2em;
+	position: absolute;
+	top:50%;
 }
 
 #scene {
 	height: 60vh;
 }
 
+#question-container {
+	display: flex;
+	justify-content: center;
+}
+
+#question {
+	position: absolute;
+	top:18%;
+	max-width: 450px;
+}
+
 #box {
-	border: white solid;
+	border: white solid 6px;
 	margin: auto;
 	max-width: 800px;
 	display: flex;
@@ -57,24 +84,9 @@ html {
 	direction: rtl;
 }
 
-.text-shake {
-	animation: textShake 0.1s infinite;
-}
-
 .answer-text {
 	align-self: center;
 	font-size: 1.5em;
-}
-
-#menu {
-	display:flex;
-	justify-content: center;
-}
-
-#start-btn {
-	font-size: 2em;
-	position: absolute;
-	top:50%;
 }
 
 .btn {
@@ -89,7 +101,7 @@ html {
 }
 
 .answer-btn {
-	border:#42fb4b solid;
+	border: #42fb4b solid;
 	color: #42fb4b;
 	width: 50px;
 	height: 50px;
@@ -101,6 +113,16 @@ html {
 .answer-selected {
 	border-color: gold;
 	color: gold;
+}
+
+.correct {
+	color: darkgreen;
+	border-color: darkgreen;
+}
+
+.wrong {
+	color: darkred;
+	border-color: darkred;
 }
 
 #timer {
