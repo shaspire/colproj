@@ -1,6 +1,6 @@
 @font-face{
 	font-family: "Determination";
-	src:url("/undertale-font-rus-eng.otf.woff2");
+	src:url("./undertale-font-rus-eng.otf.woff2");
 }
 
 @keyframes textShake {
