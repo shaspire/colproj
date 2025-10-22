@@ -30,41 +30,57 @@ function shuffleA(a) {
 }
 
 let remainingQ = ruQ.slice();
-let correct = 0;
-
+let selected = null;
+let correct = null;
 function nextQuestion() {
 	const btns = [ans_A_text,ans_B_text,ans_C_text,ans_D_text];
 	let question = remainingQ[RandomInt(0,remainingQ.length-1)];
 	remainingQ.splice(remainingQ.indexOf(question),1);
+	questionText.textContent = question.Question;
+	correct = RandomInt(0,3);
 	let rndWrong = shuffleA(question.Wrong);
 	let j = 0;
-	correct = RandomInt(0,3);
-	questionText.textContent = question.Question;
-	for (let i in btns){
-		if (i == correct){
-			btns[i].textContent = question.Answer;
+	questionTimer(3);
+	setTimeout(() => {
+		for (let i in btns){
+			if (i == correct){
+				btns[i].textContent = question.Answer;
+			}
+			else {
+				btns[i].textContent = rndWrong[j];
+				j++
+			}
 		}
-		else {
-			btns[i].textContent = rndWrong[j];
-			j++
-		}
+		questionTimer(15);
+	}, 3000);
+}
+
+function checkAnswer() {
+	if (selected == correct) {
+		new Audio ("/sfx/sound_audio_snd_dumbvictory.wav").play();
+	}
+	else {
+		new Audio ("/sfx/snd_hurt1_c.wav").play();
 	}
 }
 
+let timer = null;
 function questionTimer(seconds) {
 	clearInterval(timer);
 	let i = 0;
 	timerText.textContent = seconds;
 	timer = setInterval(() => {
 		i++;
+		timerText.textContent = seconds - i;
 		if (i>=seconds) {
+			timerText.textContent = "X";
 			clearInterval(timer);
 		}
-		timerText.textContent = seconds - i;
 	}, 1000);
 }
 
 const Music = new Audio("/sfx/MetalCrusher.mp3");
+Music.loop = true;
 
 function startGame() {
 	//Preparations
@@ -79,19 +95,32 @@ function startGame() {
 			event.code === "ArrowLeft" ? C = Math.abs(C-1) % 2 : false;
 			event.code === "ArrowRight" ? C = Math.abs(C+1) % 2 : false;
 			btns[R][C].classList.add("answer-selected");
-			Selected = parseInt(R+""+C+"",2);
+			selected = parseInt(R+""+C+"",2);
 			new Audio("/sfx/MenuCursor.ogg").play();
 		}
 		
 		if (["KeyZ","Enter"].includes(event.code) && event.repeat == false){
-			new Audio("/sfx/MenuSelect.ogg").play();
+			checkAnswer();
 		}
 	}
 	document.getElementById("game").removeAttribute("style");
 	document.getElementById("menu").style.display = "none";
-	Music.loop = true;
-	Music.play();
-	//Game loop
+	Music.play(); 
+	//3 seconds timer
+	//On timer end, start Game loop
+	//Game loop until quistions are run out 
+		//Spawn quistion
+		//3 seconds timer
+		//On timer end, spawn answer options and unblock input
+		//15 seconds timer
+			//if player confirms && time left > 3 seconds, reduce timer to 3 seconds, highlight selected and block input
+			//if player already confirms second time, skip to checkAnswer()
+		//On timer end, checkAnswer()
+		//Intermission
+		//hide quistion and answer options
+		//Wait for player input
+	//repeat
+
 
 }
 
