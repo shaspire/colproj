@@ -1,8 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');* {
+@font-face{
+	font-family: "Determination";
+	src:url("/undertale-font-rus-eng.otf.woff2");
+}
+
+* {
 	margin: 0px;
 	padding: 0px;
-	font-family: "DotGothic16", sans-serif;
+	font-family: "Determination", sans-serif;
 	color: #fff;
+}
+
+@keyframes textShake {
+	0% { transform: translate(0px,0px) }
+	25% { transform: translate(1px,0px) }
+	50% { transform: translate(0px,1px) }
+	75% { transform: translate(-1px,0px) }
+	100% { transform: translate(0px,0px ) }
 }
 
 html {
@@ -15,30 +28,42 @@ html {
 
 #box {
 	border: white solid;
-	margin: 0 50px;
+	margin: auto;
+	max-width: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
 }
 
-#answers {
+#answer-grid {
 	display: grid;
 	justify-content: center;
-	grid-template-columns: 40% 40%;
-	gap: 50px 15%;
+	grid-template-columns: 50fr 50fr;
+	gap: 50px 60px;
 	padding: 15px 0;
+	width: 100%;
 }
 
 .answer-option {
 	display: flex;
+	align-items: center;
 	flex-direction: row;
+	height: 50px;
 	gap:15px;
 }
 
 .answer-option:nth-child(odd) {
-	flex-direction: row-reverse;
+	direction: rtl;
+}
+
+.text-shake {
+	animation: textShake 0.1s infinite;
 }
 
 .answer-text {
 	align-self: center;
-	font-size: 1.7em;
+	font-size: 1.5em;
 }
 
 #menu {
@@ -56,6 +81,10 @@ html {
 	border-color: gold;
 	color: gold;
 	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
 	padding: 5px;
 }
 
@@ -64,12 +93,9 @@ html {
 	color: #42fb4b;
 	width: 50px;
 	height: 50px;
-	font-weight: 600;
 	font-size: 3em;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-shrink: 0;
+	letter-spacing: -0.15em;
+	padding-bottom: 0;
 }
 
 .answer-selected {
