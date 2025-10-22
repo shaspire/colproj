@@ -14,6 +14,15 @@ const ans_D_text = document.getElementById("1-1_text");
 async function sleep(ms) {
 	await new Promise((resolve) => setTimeout(resolve, ms));
 }
+//await waitForInput();
+async function waitForInput() {
+	await new Promise((resolve) =>
+		window.onkeydown = (event) => {		
+			if (["KeyZ","Enter"].includes(event.code) && event.repeat == false){
+				resolve();
+		}
+		});
+}
 
 function RandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) + min);
