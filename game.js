@@ -50,7 +50,7 @@ function checkAnswer() {
 	if (selected == correct) {
 		ans_text_list[selected].classList.add("correct");
 		ans_btns_list[selected].classList.add("correct");
-		new Audio ("/sfx/sound_audio_snd_dumbvictory.wav").play();
+		new Audio ("./sfx/sound_audio_snd_dumbvictory.wav").play();
 	}
 	else {
 		if (typeof(selected) != "number") {
@@ -60,7 +60,7 @@ function checkAnswer() {
 			ans_text_list[selected].classList.add("wrong");
 			ans_btns_list[selected].classList.add("wrong");
 		}
-		new Audio ("/sfx/snd_hurt1_c.wav").play();
+		new Audio ("./sfx/snd_hurt1_c.wav").play();
 	}
 }
 
@@ -126,7 +126,7 @@ async function waitForAnswer() {
 				event.code === "ArrowRight" ? C = Math.abs(C+1) % 2 : false;
 				ans_btns_binary[R][C].classList.add("answer-selected");
 				selected = parseInt(R+""+C+"",2);
-				new Audio("/sfx/MenuCursor.ogg").play();
+				new Audio("./sfx/MenuCursor.ogg").play();
 			}
 			
 			if (["KeyZ","Enter"].includes(event.code) && event.repeat == false && selected != null){
@@ -145,7 +145,7 @@ async function waitForAnswer() {
 	);
 }
 
-const Music = new Audio("/sfx/MetalCrusher.mp3");
+const Music = new Audio("./sfx/MetalCrusher.mp3");
 Music.loop = true;
 Music.volume = 0.2;
 
@@ -169,7 +169,7 @@ async function startGame() {
 			element.classList.remove("wrong");
 			element.classList.remove("answer-selected");
 		});
-		new Audio("/sfx/MenuSelect.ogg").play();
+		new Audio("./sfx/MenuSelect.ogg").play();
 	//repeat
 	}
 	answer_grid.style.display = "none";
@@ -180,7 +180,7 @@ async function startGame() {
 //Press Start
 window.onkeydown = (event) => {
 		if (["KeyZ","Enter"].includes(event.code)){
-			new Audio("/sfx/MenuSelect.ogg").play();
+			new Audio("./sfx/MenuSelect.ogg").play();
 			startGame();
 			window.onkeydown = undefined;
 		}
