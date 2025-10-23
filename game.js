@@ -84,11 +84,8 @@ function questionTimer(seconds,func = undefined) {
 let remainingQ = ruQ.slice();
 let selected = null;
 let correct = null;
-async function spawnQuestion() {
+async function spawnQuestion(question) {
 	answer_grid.style.display = "none";
-	//Pick a random question
-	let question = remainingQ[RandomInt(0,remainingQ.length-1)];
-	remainingQ.splice(remainingQ.indexOf(question),1);
 	question_text.textContent = question.Question;
 	//Place answers randomly
 	correct = RandomInt(0,3);
@@ -111,34 +108,34 @@ async function spawnQuestion() {
 	);
 }
 
-async function waitForAnswer() {
-	blockControls = false;
+async function waitForAnswer(time) {
+	time = typeof(time) == "number" ? time : 15;
 	let C = 0;
 	let R = 0;
 	await new Promise((resolve) => {
-		questionTimer(10,resolve);
+		questionTimer(time,resolve);
 		window.onkeydown = (event) => {
-			if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(event.code) && event.repeat == false && !blockControls){
+			if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(event.code) && event.repeat == false){
 				ans_btns_binary[R][C].classList.remove("answer-selected");
 				event.code === "ArrowUp" ? R = Math.abs(R-1) % 2 : false;
 				event.code === "ArrowDown" ? R = Math.abs(R+1) % 2 : false;
 				event.code === "ArrowLeft" ? C = Math.abs(C-1) % 2 : false;
 				event.code === "ArrowRight" ? C = Math.abs(C+1) % 2 : false;
 				ans_btns_binary[R][C].classList.add("answer-selected");
-				selected = parseInt(R+""+C+"",2);
 				new Audio("./sfx/MenuCursor.ogg").play();
 			}
 			
-			if (["KeyZ","Enter"].includes(event.code) && event.repeat == false && selected != null){
-				if (blockControls) {
+			if (["KeyZ","Enter"].includes(event.code) && event.repeat == false){
+				if (selected == parseInt(R+""+C+"",2)) {
 					clearInterval(timer);
 					window.onkeydown = undefined;
 					resolve();
 				}
 				else {
-					blockControls = true;
+					typeof(selected) == "number" ? ans_text_list[selected].classList.remove("answer-selected") : false;
+					selected = parseInt(R+""+C+"",2);
 					ans_text_list[selected].classList.add("answer-selected");
-					questionTimer(3,resolve);
+					new Audio("./sfx/snd_bell.wav").play();
 				}
 			}
 		}}
@@ -150,6 +147,11 @@ Music.loop = true;
 Music.volume = 0.2;
 
 async function startGame() {
+	//Preloading audio
+	new Audio("./sfx/MenuCursor.ogg").preload = "auto";
+	new Audio("./sfx/snd_bell.wav").preload = "auto";
+	new Audio ("./sfx/snd_hurt1_c.wav").preload = "auto";
+	new Audio ("./sfx/sound_audio_snd_dumbvictory.wav").preload = "auto";
 	//Preparations
 	document.getElementById("game").removeAttribute("style");
 	document.getElementById("menu").style.display = "none";
@@ -159,8 +161,13 @@ async function startGame() {
 	await sleep(3);
 	//Game loop until questions are run out
 	while(remainingQ.length != 0) {
-		await spawnQuestion();
-		await waitForAnswer();
+		//0
+		let question = remainingQ[RandomInt(0,remainingQ.length-1)];
+		remainingQ.splice(remainingQ.indexOf(question),1);
+		await spawnQuestion(question);
+		//1
+		await waitForAnswer(question.Time);
+		//2
 		checkAnswer();
 		await waitForInput();
 		selected = null;

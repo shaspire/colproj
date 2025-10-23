@@ -27,6 +27,17 @@ const ruQ = [
 		]
 	},
 	{
+		"Question":"3+2(3+7/(4+6(-2)))",
+		"Answer":"7.25",
+		"Wrong":[
+			"-23",
+			"-2.5",
+			"-6.25",
+			"3.125"
+		],
+		"Time":60
+	},
+	{
 		"Question":"Template",
 		"Answer":"Template0",
 		"Wrong":[
