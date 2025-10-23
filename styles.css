@@ -81,7 +81,10 @@ html {
 }
 
 .answer-option:nth-child(odd) {
-	direction: rtl;
+	flex-flow: row-reverse;
+	.answer-text {
+		text-align: end;
+	}
 }
 
 .answer-text {
