@@ -1,4 +1,5 @@
 {//Make everything innaccessible from console
+//HTML elements
 const question_text = document.getElementById("question");
 const timer_text = document.getElementById("timer");
 const answer_grid = document.getElementById("answer-grid");
@@ -8,23 +9,32 @@ const ansC_btn = document.getElementById("1-0_btn");
 const ansD_btn = document.getElementById("1-1_btn");
 const ans_btns_list = [ansA_btn,ansB_btn,ansC_btn,ansD_btn];
 const ans_btns_binary = [[ansA_btn,ansB_btn],[ansC_btn,ansD_btn]];
-
 const ansA_text = document.getElementById("0-0_text");
 const ansB_text = document.getElementById("0-1_text");
 const ansC_text = document.getElementById("1-0_text");
 const ansD_text = document.getElementById("1-1_text");
 const ans_text_list = [ansA_text,ansB_text,ansC_text,ansD_text];
-
-//await sleep();
-async function sleep(ms) {
-	await new Promise((resolve) => setTimeout(resolve, ms));
+//Audio
+//These functions may seem unnecessary, but I had to use them because Audio.currentTime doesn't work properly in Firefox
+function cursor_sound() {
+	let sound = new Audio("./sfx/MenuCursor.ogg");
+	sound.play();
 }
+function select_sound() {
+	let sound = new Audio("./sfx/MenuSelect.ogg");
+	sound.play();
+}
+const correct_sound = new Audio ("./sfx/sound_audio_snd_dumbvictory.wav");
+const wrong_sound = new Audio ("./sfx/snd_hurt1_c.wav");
+const music = new Audio("./sfx/MetalCrusher.mp3");
+music.loop = true;
+music.volume = 0.3;
 
+//Functions
 function RandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-//Shuffle Array
 function shuffleA(a) {
 	let o = a.slice();
 	for (let i = o.length - 1; i > 0; i--) {
@@ -34,7 +44,10 @@ function shuffleA(a) {
 	return o;
 }
 
-//await waitForInput();
+async function sleep(ms) {
+	await new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 async function waitForInput() {
 	await new Promise((resolve) =>
 		window.onkeydown = (event) => {		
@@ -50,7 +63,7 @@ function checkAnswer() {
 	if (selected == correct) {
 		ans_text_list[selected].classList.add("correct");
 		ans_btns_list[selected].classList.add("correct");
-		new Audio ("./sfx/sound_audio_snd_dumbvictory.wav").play();
+		correct_sound.play();
 	}
 	else {
 		if (typeof(selected) != "number") {
@@ -60,34 +73,29 @@ function checkAnswer() {
 			ans_text_list[selected].classList.add("wrong");
 			ans_btns_list[selected].classList.add("wrong");
 		}
-		new Audio ("./sfx/snd_hurt1_c.wav").play();
+		wrong_sound.play();
 	}
 }
 
-//Basically, it can work as SetTimeout, but can be used just to set a countdown
 let timer = null;
-function questionTimer(seconds,func = undefined) {
+function questionTimer(seconds,func = {}) {
 	clearInterval(timer);
-	let i = 0;
 	timer_text.textContent = seconds;
 	timer = setInterval(() => {
-		i++;
-		timer_text.textContent = seconds - i;
-		if (i>=seconds) {
+		seconds--;
+		timer_text.textContent = seconds;
+		if (seconds<=0) {
 			timer_text.textContent = "X";
-			func != undefined ? func() : false;
+			func();
 			clearInterval(timer);
 		}
 	}, 1000);
 }
 
-let remainingQ = ruQ.slice();
-let selected = null;
 let correct = null;
 async function spawnQuestion(question) {
 	answer_grid.style.display = "none";
 	question_text.textContent = question.Question;
-	//Place answers randomly
 	correct = RandomInt(0,3);
 	let rndWrong = shuffleA(question.Wrong);
 	let j = 0;
@@ -108,12 +116,14 @@ async function spawnQuestion(question) {
 	);
 }
 
-async function waitForAnswer(time) {
-	time = typeof(time) == "number" ? time : 15;
-	let C = 0;
-	let R = 0;
+let selected = null;
+async function waitForAnswer(seconds) {
+	seconds = typeof(seconds) == "number" ? seconds : 15;
 	await new Promise((resolve) => {
-		questionTimer(time,resolve);
+		let C = 0;
+		let R = 0;	
+		ans_btns_binary[R][C].classList.add("answer-selected");
+		questionTimer(seconds,resolve);
 		window.onkeydown = (event) => {
 			if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(event.code) && event.repeat == false){
 				ans_btns_binary[R][C].classList.remove("answer-selected");
@@ -122,44 +132,34 @@ async function waitForAnswer(time) {
 				event.code === "ArrowLeft" ? C = Math.abs(C-1) % 2 : false;
 				event.code === "ArrowRight" ? C = Math.abs(C+1) % 2 : false;
 				ans_btns_binary[R][C].classList.add("answer-selected");
-				new Audio("./sfx/MenuCursor.ogg").play();
+				cursor_sound();
 			}
 			
 			if (["KeyZ","Enter"].includes(event.code) && event.repeat == false){
-				if (selected == parseInt(R+""+C+"",2)) {
+				if (selected == parseInt(`${R}${C}`,2)) {
 					clearInterval(timer);
 					window.onkeydown = undefined;
 					resolve();
 				}
 				else {
 					typeof(selected) == "number" ? ans_text_list[selected].classList.remove("answer-selected") : false;
-					selected = parseInt(R+""+C+"",2);
+					selected = parseInt(`${R}${C}`,2);
 					ans_text_list[selected].classList.add("answer-selected");
-					new Audio("./sfx/snd_bell.wav").play();
+					select_sound();
 				}
 			}
-		}}
-	);
+		}
+	});
 }
 
-const Music = new Audio("./sfx/MetalCrusher.mp3");
-Music.loop = true;
-Music.volume = 0.2;
-
+//Main
 async function startGame() {
-	//Preloading audio
-	new Audio("./sfx/MenuCursor.ogg").preload = "auto";
-	new Audio("./sfx/snd_bell.wav").preload = "auto";
-	new Audio ("./sfx/snd_hurt1_c.wav").preload = "auto";
-	new Audio ("./sfx/sound_audio_snd_dumbvictory.wav").preload = "auto";
-	//Preparations
 	document.getElementById("game").removeAttribute("style");
 	document.getElementById("menu").style.display = "none";
-	Music.play(); 
-	//Starting
+	let remainingQ = ruQ.slice();
+	music.play(); 
 	questionTimer(3);
 	await sleep(3);
-	//Game loop until questions are run out
 	while(remainingQ.length != 0) {
 		//0
 		let question = remainingQ[RandomInt(0,remainingQ.length-1)];
@@ -176,9 +176,9 @@ async function startGame() {
 			element.classList.remove("wrong");
 			element.classList.remove("answer-selected");
 		});
-		new Audio("./sfx/MenuSelect.ogg").play();
-	//repeat
+		select_sound();
 	}
+
 	answer_grid.style.display = "none";
 	question_text.style.display = "none";
 	timer_text.textContent = "Закончились вопросы";
@@ -187,9 +187,10 @@ async function startGame() {
 //Press Start
 window.onkeydown = (event) => {
 		if (["KeyZ","Enter"].includes(event.code)){
-			new Audio("./sfx/MenuSelect.ogg").play();
-			startGame();
+			select_sound();
 			window.onkeydown = undefined;
+			startGame();
 		}
 	}
+
 }
