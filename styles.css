@@ -49,18 +49,19 @@ html {
 
 #question {
 	position: absolute;
-	top:18%;
+	top:20%;
 	max-width: 450px;
 }
 
 #box {
 	border: white solid 6px;
 	margin: auto;
+	padding: 15px 10px;
+	height: 200px;
 	max-width: 800px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 200px;
 }
 
 #answer-grid {
@@ -90,6 +91,7 @@ html {
 .answer-text {
 	align-self: center;
 	font-size: 1.5em;
+	text-wrap: balance;
 }
 
 .btn {
