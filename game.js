@@ -44,10 +44,6 @@ function shuffleA(a) {
 	return o;
 }
 
-async function sleep(ms) {
-	await new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 async function waitForInput() {
 	await new Promise((resolve) =>
 		window.onkeydown = (event) => {		
@@ -158,8 +154,6 @@ async function startGame() {
 	document.getElementById("menu").style.display = "none";
 	let remainingQ = ruQ.slice();
 	music.play(); 
-	questionTimer(3);
-	await sleep(3);
 	while(remainingQ.length != 0) {
 		//0
 		let question = remainingQ[RandomInt(0,remainingQ.length-1)];
