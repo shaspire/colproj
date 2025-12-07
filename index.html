@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<title></title>
+	<style id="colorscheme"></style>
+</head>
+<body>
+	<header>
+		<!-- LEFT -->
+		<div class="bar-container">
+			<nav id="bar-workspaces" class="bar-container-item bg0 flex-centered">
+				<button onclick="switchDesktop(0)" class="nav-item purple">I</button>
+				<button onclick="switchDesktop(1)" class="nav-item purple">II</button>
+				<button onclick="switchDesktop(2)" class="nav-item purple">III</button>
+				<button onclick="switchDesktop(3)" class="nav-item purple">IV</button>
+				<button onclick="switchDesktop(4)" class="nav-item purple">V</button>
+			</nav>
+		</div>
+		<!-- MID -->
+		<div class="bar-container">
+			<div class="bar-container-item flex-centered bg0">
+				<p class="flex-centered" id="time"></p>
+			</div>
+		</div>
+		<!-- RIGHT -->
+		<div class="bar-container">
+			<select id="background-select" class="bar-container-item"></select>
+			<select id="colorscheme-select" class="bar-container-item"></select>
+		</div>
+	</header>
+
+	<main id="desktop">
+		<!-- Check out this random rice -->
+		<section>
+			<article>
+				<h1>First</h1>
+			</article>
+		</section>
+		<!-- Duh -->
+		<section>
+			<article>
+				<h1>Second</h1>
+			</article>
+		</section>
+		<!-- UNIX is Beautiful -->
+		<section>
+			<article class="bg0">
+				<h1>UNIX is Beautiful<span class="fg00">(except macos, ios and other apple scammy "products")</span></h1>
+			</article>
+		</section>
+		<!-- This text is here to be there -->
+		<section>
+			<article>
+				<h1>Fourth</h1>
+			</article>
+		</section>
+		<!-- I use Arch btw lol(cuz i dunno what to put here)-->
+		<section>
+			<article>
+				<h1>Fifth</h1>
+			</article>
+		</section>
+	</main>
+
+	<script src="data.js"></script>
+	<script defer src="main.js"></script>
+</body>
+</html>
