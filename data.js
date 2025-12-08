@@ -30,7 +30,7 @@ const COLORSCHEMES = {
 
 --fg1: #cdd6f4;
 --fg0: #cdd6f4;
---fg00: #a6adc8;
+--fg00: #9399b2;
 --bg1: #45475a;
 --bg0: #1e1e2e;
 }`,
