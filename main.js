@@ -16,7 +16,8 @@ function setBackground(Name) {
 }
 
 function switchDesktop(Index) {
-	body.style.backgroundPositionX = `${Index/(bar_workspaces.length*2)*100+30}%`;
+	let range = 70;
+	body.style.backgroundPositionX = `${Index/(bar_workspaces.length-1) * range + (100-range)/2}%`;
 	return desktop.style.transform = `translateX(${-(Index*100)}vw)`;
 }
 
