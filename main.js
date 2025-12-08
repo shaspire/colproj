@@ -35,35 +35,23 @@ function RandomInt(min, max) {
 }
 
 // INITIALIZATION	
-const css_colorsheme = document.getElementById("colorscheme");
-const colorsheme_select = document.getElementById("colorscheme-select");
-const background_select = document.getElementById("background-select");
-const time = document.getElementById("time");
-const bar_workspaces = Object.values(document.getElementById("bar-workspaces").children);
 const body = document.body;
 const desktop = document.getElementById("desktop");
 
+const css_colorsheme = document.getElementById("colorscheme");
+const colorsheme_select = document.getElementById("colorscheme-select");
+const background_select = document.getElementById("background-select");
+
+const bar_workspaces = Object.values(document.getElementById("bar-workspaces").children);
+const time = document.getElementById("time");
+
 // MAIN
-body.style.backgroundPositionX = `${2/(bar_workspaces.length*2)*100+30}%`
+setColorscheme(Object.keys(COLORSCHEMES)[RandomInt(0,Object.keys(COLORSCHEMES).length-1)]);
+setBackground(Object.keys(BACKGROUNDS)[RandomInt(0,Object.keys(BACKGROUNDS).length-1)]);
 
-oncePerSecond(() => {
-	time.textContent = new Date().toTimeString().slice(0,8);
-})
+oncePerSecond(() => {time.textContent = new Date().toTimeString().slice(0,8);});
 
-for (const name in COLORSCHEMES) {
-	colorsheme_select.insertAdjacentHTML("beforeend",`<option value="${name}">${name}</option>`);
-}
-for (const name in BACKGROUNDS) {
-	background_select.insertAdjacentHTML("beforeend",`<option value="${name}">${name}</option>`);
-}
-
-colorsheme_select.onchange = () => {
-	setColorscheme(colorsheme_select.value);
-}
-
-background_select.onchange = () => {
-	setBackground(background_select.value);
-}
-
-setColorscheme(Object.keys(COLORSCHEMES)[RandomInt(0,Object.keys(COLORSCHEMES).length-1)])
-setBackground(Object.keys(BACKGROUNDS)[RandomInt(0,Object.keys(BACKGROUNDS).length-1)])
+for (const name in COLORSCHEMES) {colorsheme_select.insertAdjacentHTML("beforeend",`<option value="${name}">${name}</option>`)}
+for (const name in BACKGROUNDS) {background_select.insertAdjacentHTML("beforeend",`<option value="${name}">${name}</option>`)}
+colorsheme_select.onchange = () => {setColorscheme(colorsheme_select.value)}
+background_select.onchange = () => {setBackground(background_select.value)}
