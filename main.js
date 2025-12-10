@@ -17,7 +17,7 @@ function setBackground(Name) {
 
 function switchDesktop(Index) {
 	let range = 70;
-	body.style.backgroundPositionX = `${Index/(bar_workspaces.length-1) * range + (100-range)/2}%`;
+	body.style.backgroundPositionX = `${Index/4 * range + (100-range)/2}%`;
 	return desktop.style.transform = `translateX(${-(Index*100)}vw)`;
 }
 
@@ -42,7 +42,6 @@ const css_colorsheme = document.getElementById("colorscheme");
 const colorsheme_select = document.getElementById("colorscheme-select");
 const background_select = document.getElementById("background-select");
 
-const bar_workspaces = Object.values(document.getElementById("bar-workspaces").children);
 const time = document.getElementById("time");
 
 // MAIN
