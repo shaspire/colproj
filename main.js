@@ -45,13 +45,12 @@ const background_select = document.getElementById("background-select");
 const time = document.getElementById("time");
 
 // MAIN
-setColorscheme(Object.keys(COLORSCHEMES)[RandomInt(0,Object.keys(COLORSCHEMES).length-1)]);
-setBackground(Object.keys(BACKGROUNDS)[RandomInt(0,Object.keys(BACKGROUNDS).length-1)]);
-
 oncePerSecond(() => {time.textContent = new Date().toTimeString().slice(0,8)});
 
 for (const name in COLORSCHEMES) {colorsheme_select.insertAdjacentHTML("beforeend",`<option value="${name}">${name}</option>`)}
 for (const name in BACKGROUNDS) {background_select.insertAdjacentHTML("beforeend",`<option value="${name}">${name}</option>`)}
+setColorscheme(Object.keys(COLORSCHEMES)[RandomInt(0,Object.keys(COLORSCHEMES).length-1)]);
+setBackground(Object.keys(BACKGROUNDS)[RandomInt(0,Object.keys(BACKGROUNDS).length-1)]);
 colorsheme_select.onchange = () => {setColorscheme(colorsheme_select.value)}
 background_select.onchange = () => {setBackground(background_select.value)}
 
